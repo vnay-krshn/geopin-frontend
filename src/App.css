@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Homepage */
+
+.landing-nav{
+    background: rgb(2, 185, 109);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.landing-nav ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color:white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.landing-nav a{
+    list-style: none;
+    text-decoration: none;
+    color:white;
 }
 
-.App-link {
-  color: #61dafb;
+.landingpage{
+    background:rgb(6, 97, 59) ;
+    min-height: 80vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Register */
+
+.register form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.register form a{
+    text-decoration: none;
+    margin: 1em;
+}
+
+.register h2{
+    text-align: center;
+    margin:1em;
+}
+
+/* howItWorks */
+
+.howItWorks h1{
+    color: rgb(89, 0, 255);
+    text-align: center;
+    margin: 0.8em;
+}
+
+.howItWorks h4{
+    text-align: center;
+}
+
+.icon-container{
+    /*background-color: crimson;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2.5em;
+}
+
+/* Contact */
+
+.footer{
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: darkblue;
+}
+
+.footer h2{
+    color: white;
+}
+
+/* Features */
+
+.card{
+     width: 30%;
+     display: flex;
+     text-align: center;
+     flex-direction: column;
+     align-items:center;
+     justify-content: space-evenly;
+     /*background: cyan;*/
+ }
+
+ .card img{
+    width: 20%;
+    margin: 1.5em;
+ }
+
+ .card h4{
+     margin:1em;
+ }
+
+/* Login */
+
+.login a{
+    color:black;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login h2{
+    text-align: center;
+    margin:1em;
+}
+
+.login form a{
+    text-decoration: none;
+    margin: 1em;
+}
+
+/* homepageNav */
+
+.homepage-nav{
+    background: rgb(2, 58, 34);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.homepage-nav ul{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color:white;
+}
+
+/* homepage */
+
+.homepage{
+    background:rgb(6, 97, 59) ;
+    min-height: 90vh;
+}
+
+.home-display{
+    text-align: center;
+    padding: 10em;
+    color: white;
+}
+
+.home-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   /* border: violet solid 3px;*/
+    width: 20%;
+    margin: 2em auto;
+}
+
+/* options */
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*border: violet solid 3px;*/
+    width: 20%;
+    margin: 0 auto;
+}
+
+/* search page */
+
+.searchpage h2{
+   text-align: center;
+   margin: 3em;
+}
+
+/* check in page */
+
+.checkInPage h2{
+    text-align: center;
+    margin: 3em;
+ }
+
+ /* search result page */
+
+ .searchResults-options{
+     padding: 2em;
+     background: chartreuse;
+ }
+
