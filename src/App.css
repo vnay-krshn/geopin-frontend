@@ -205,3 +205,171 @@
      background: chartreuse;
  }
 
+ .visitor-details{
+     /* background:gold; */
+     padding: 2em 10em;
+ }
+
+ .visitor-details button{
+     margin-left: 67em;
+ }
+
+ .visitor-details-header{
+    /* background: green;*/
+     margin: 1em;
+     display: flex;
+     justify-content: space-between;
+ }
+ .visitor-details-cards{
+     /* background: chocolate; */
+     display: flex;
+     flex-flow: row wrap;      
+     justify-content: space-around;
+ }
+
+ .visitor-details-header ul{
+    /*background: #5d5d5d;*/
+    width: 8%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ /* check in result page */
+
+ .checkinResults-options{
+    padding: 2em;
+    /*background: chartreuse;*/
+}
+
+/* maps */
+
+#map {
+    width: 100%;
+    height: 100%;
+    /* z-index: 100; */
+  }
+  
+  #mapSearchContainer {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    height: 30px;
+    width: 180px;
+    /* z-index: 110; */
+    font-size: 10pt;
+    color: #5d5d5d;
+    border: solid 1px #bbb;
+    background-color: #f8f8f8;
+  }
+  
+  .pointer {
+    position: absolute;
+    top: 86px;
+    left: 60px;
+    /* z-index: 99999; */
+  }
+  
+  .geocoder-control-input {
+    background-image: url("https://raw.githubusercontent.com/Esri/esri-leaflet-geocoder/master/src/img/search.png");
+  }
+
+  /* ratings */
+
+  .rate{
+     /* background: chartreuse;*/
+      padding: 0.25em;
+      width: 8em;
+  }
+
+  .rate input[type='radio']{
+      visibility: hidden;
+  }
+
+  /* visitors */
+
+  .visitor{
+      position: relative;
+      margin: 1em;
+      background: #ebf5f6;
+      display: flex;
+      width: 43%;
+      min-height: 10vh;
+      padding: 1em;
+      justify-content: space-around;
+  }
+
+  .visitor img{
+      border-radius: 50%;
+      height: 5em;
+      width: 5em;
+  }
+
+  .visitor-info{
+    /* background: darkmagenta;  */
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2,9em);
+    grid-template-rows: repeat(2,2em);
+    
+  }
+
+  /* place info*/
+
+  .placeInfo{
+      background: darkblue;
+     color: white;
+     display: flex;
+     justify-content: space-evenly;
+     width: 78vw;
+     padding: 1em;
+     margin:1em auto;
+  }
+  
+  .information{
+      background: violet;
+      width: 26em;
+      padding: 1em;
+  }
+
+  .information h2{
+      margin-bottom:0.5em;
+  }
+
+  .details{
+      padding: 1em;
+      background: tomato;
+      width: 18em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+  }
+
+  .details .rate{
+     margin: 0 auto;
+     background: rgb(2, 185, 109);
+     width: 8em;
+  }
+
+  /* filter */
+
+  .filter{
+      margin: 2em;
+      display: flex;
+      flex-direction: column;
+      background: #5d5d5d;
+      width: 30vw;
+      justify-content: space-evenly;
+  }
+
+  .filter div{
+      display: flex;
+      justify-content: space-evenly;
+      width: 30vw;
+  }
+
+  .filter input,button{
+      padding: 0.5em;
+      margin:0.5em;
+  }

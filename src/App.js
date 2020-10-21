@@ -8,11 +8,14 @@ import Register from './components/register';
 import SearchPage from './components/searchpage';
 import CheckInPage from './components/checkInPage'
 import SearchResults from './components/searchResultPage';
+import CheckinResults from './components/checkinResultPage'
+import {OptionProvider} from './components/optionsContext'
 
 
 function App() {
 
-  return (
+ return (
+  <OptionProvider>
     <div>
       <Router>
         <Switch>
@@ -23,10 +26,11 @@ function App() {
             <Route path='/search' component={SearchPage}/>
             <Route path='/checkIn' component={CheckInPage}/>
             <Route path='/searchResults' component={SearchResults}/>
+            <Route path='/checkinResults' component={CheckinResults}/>
         </Switch>
       </Router>
     </div>
-    
+    </OptionProvider>
   );
 }
 

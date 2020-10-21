@@ -2,19 +2,24 @@ import React, { useContext } from 'react'
 import HomepageNav from './homepageNav'
 import Options from './options'
 import {OptionsContext} from './optionsContext'
+import Maps from './maps'
 
-function CheckInPage(){
+function CheckinResults(){
     const {feature, featureroute} = useContext(OptionsContext)
 
     const[option, setoption] = feature
     const[optroute, setroute] = featureroute
-
+    
     return(
-    <div className="checkInPage">
-       <HomepageNav/>
-       <h2>Check into a location</h2>
-       <Options option={option} optroute={optroute}/>
+    <div className='checkinResults'>
+        <HomepageNav/>
+        <div className='checkinResults-options'>
+            <Options option={option} optroute={optroute}/>
+        </div>
+        <div>
+            <Maps/>
+        </div>
     </div>)
 }
 
-export default CheckInPage
+export default CheckinResults

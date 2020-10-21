@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 function Login(){
 
@@ -13,7 +13,7 @@ function Login(){
                 <button>Login</button>  
             </Link>
             <Link to='/register'>
-                <a>Go back to register</a>
+                <a href='#'>Go back to register</a>
             </Link>
         </form>
     </div>)

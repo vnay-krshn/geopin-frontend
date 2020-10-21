@@ -22,7 +22,7 @@ function Landingpage(){
                         <li onClick={toggleMid}>How it works</li>
                         <li onClick={toggleBttm}>Contact</li>
                         <Link to='/register'>
-                             <a>Login</a>
+                             <a href='#'>Login</a>
                         </Link>
                     </ul>
                 </nav>
