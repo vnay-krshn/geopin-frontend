@@ -13,7 +13,7 @@ const PlaceInfo=()=>{
         </div>
         <div className="details">
             <label>Visitors : 476</label>
-            <label>Ratings : </label><Ratings/>
+            <label>Ratings : </label><Ratings size={10}/>
             <label>Zip : 1108</label>
         </div>
     </div>)

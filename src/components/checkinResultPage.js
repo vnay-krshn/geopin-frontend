@@ -3,6 +3,8 @@ import HomepageNav from './homepageNav'
 import Options from './options'
 import {OptionsContext} from './optionsContext'
 import Maps from './maps'
+import PlaceInfo from './placeinfo'
+import Review from './review'
 
 function CheckinResults(){
     const {feature, featureroute} = useContext(OptionsContext)
@@ -18,6 +20,12 @@ function CheckinResults(){
         </div>
         <div>
             <Maps/>
+        </div>
+        <div>
+            <PlaceInfo/>
+        </div>
+        <div>
+            <Review/>
         </div>
     </div>)
 }

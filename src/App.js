@@ -10,7 +10,7 @@ import CheckInPage from './components/checkInPage'
 import SearchResults from './components/searchResultPage';
 import CheckinResults from './components/checkinResultPage'
 import {OptionProvider} from './components/optionsContext'
-
+import VisitorProfile from './components/visitorProfile'
 
 function App() {
 
@@ -27,7 +27,8 @@ function App() {
             <Route path='/checkIn' component={CheckInPage}/>
             <Route path='/searchResults' component={SearchResults}/>
             <Route path='/checkinResults' component={CheckinResults}/>
-        </Switch>
+            <Route path='/visitorProfile' component={VisitorProfile}/>
+          </Switch>
       </Router>
     </div>
     </OptionProvider>

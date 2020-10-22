@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {FaStar} from 'react-icons/fa'
 
-const Ratings=()=>{
+const Ratings=({size})=>{
 
 const[rating, setRating] = useState(null)
 
@@ -21,7 +21,7 @@ return(
                 <FaStar
                 className="star"
                 color={ratingValue <= rating ? '#ffc107' : '#e4e5e9'}
-                size={10}/>
+                size={size}/>
             </label>
         )
     })}

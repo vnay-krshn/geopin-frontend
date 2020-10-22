@@ -278,10 +278,10 @@
   /* ratings */
 
   .rate{
-     /* background: chartreuse;*/
-      padding: 0.25em;
-      width: 8em;
-  }
+     /* background: chartreuse; */
+      /* padding: 0.25em; */
+      width: auto;
+    }
 
   .rate input[type='radio']{
       visibility: hidden;
@@ -292,7 +292,7 @@
   .visitor{
       position: relative;
       margin: 1em;
-      background: #ebf5f6;
+      background: #61b0b8;
       display: flex;
       width: 43%;
       min-height: 10vh;
@@ -318,7 +318,7 @@
   /* place info*/
 
   .placeInfo{
-      background: darkblue;
+     background: darkblue;
      color: white;
      display: flex;
      justify-content: space-evenly;
@@ -369,7 +369,195 @@
       width: 30vw;
   }
 
-  .filter input,button{
+  .filter input,.filter button{
       padding: 0.5em;
       margin:0.5em;
   }
+
+  /* profile head */
+
+  .profileHead-header{
+      background: rgb(3, 107, 3);
+      display: flex;
+      justify-content: space-evenly;
+      min-height: 28vh;
+      color: white;
+ }
+
+ .profileHead-header #profile{
+    border-radius: 50%;
+    width: 6.5em;
+    height: 6.5em;
+    border: solid white 2px;
+    
+    position: relative;
+    top: 7.5em;
+    left: 4.5em;
+}
+
+.profileHead-name{
+    /* background: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0.5em;
+    align-items: flex-start;
+    height: 2.5em;
+
+    position: relative;
+    top: 7.1em;
+    left: -1.6em;
+}
+
+.profileHead-nationality{
+    /* background: chartreuse; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0.5em;
+    height: 1.5em;
+    width: 7em;
+
+    position: relative;
+    top: 8.2em;
+    left: -8em;
+}
+
+.profileHead-header .profileHead-nationality img{
+      max-width: 2em;
+  }
+.profileHead-header #save{
+    padding: 1em;
+    height: 8vh;
+
+    position: relative;
+    top: 8.8em;
+    left: -11em;
+}
+
+/* profile contact */
+
+.profileHead-contact{
+    /* background: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding:1em;
+    height: 1.5em;
+    width: 8em;
+
+    position: relative;
+    top: 7.3em;
+    left: -2.5em;
+}
+
+/* placesLogged */
+
+.placesLogged{
+    background: violet;
+    display: flex;
+    margin: 0.5em;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-around; 
+}   
+
+.placesLogged .region{
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.placesLogged-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.placesLogged-descr{
+   padding: 1em;
+}
+
+.placesLogged img{
+    width: auto;
+    max-height: 12em;
+}
+
+/* visitor profile */
+
+.place-cards-container{
+    background: turquoise;
+    padding: 6em 1em;
+}
+
+.place-cards-container #numberLog{
+    margin-left: 61.5em;
+}
+
+.place-cards-container button{
+    margin-left: 80em;
+    padding: 0.55em;
+}
+
+.place-cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+/* date-rating */
+
+.date-rating{
+    width: auto;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 8vh;
+}
+
+/* .date-rating #date{
+    margin-left: 1em;
+} */
+
+/* Review */
+
+.review{
+    background: rgb(173, 173, 224);
+    width: 30vw;
+    height: 50vh;
+    padding: 1em;
+}
+
+.review-box{
+    border:1px solid black;
+    width: 20.9em;
+    margin: 1em;
+}
+
+.review-box textarea{
+    padding: 1em;
+    width: 23.1em;
+    height: 12em;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    resize: none;
+}
+
+.review-rating{
+    display: flex;
+    padding: 0.7em;
+    justify-content: space-between;
+    width: 20em;
+}
+
+.review button{
+    margin: 1em 23em;
+}
+
