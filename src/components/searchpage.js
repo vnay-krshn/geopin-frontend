@@ -12,7 +12,7 @@ function SearchPage(){
     return(
     <div className="searchpage">
        <HomepageNav/>
-       <h2>Search for a location</h2>
+       <h2>FIND YOUR DREAM DESTINATION</h2>
        <Options option={option} optroute={optroute}/>
     </div>)
 }

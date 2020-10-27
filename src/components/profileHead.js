@@ -17,7 +17,6 @@ const ProfileHead=()=>{
                     <label>Indian</label>
                 </div>
                 <ProfileContact/>
-                <button id="save">Save contact</button>
             </div>
         </div>)
 }

@@ -1,23 +1,37 @@
 import React from 'react'
-import {BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 
 function Register(){
     return(
-    <div className="register">
-        <h2>Register</h2>
-        <form>
-            <input placeholder="name"></input>    
-            <input placeholder="email"></input>   
-            <input placeholder="password"></input> 
-            <Link to='/login'>
-                <button>Submit</button>  
-            </Link>
-            <Link to='/login'>
-                <a>Go to login page</a>
-            </Link>
-        </form>        
-    </div>)
+        <div className="register">
+            <img src='/imgs/logo.svg'></img>
+            <div className="register-box">
+                <h3>REGISTER</h3>
+                <form className="register-form">
+                    <input placeholder="Name"></input>    
+                    <input placeholder="Email"></input>   
+                    <div className="phone">
+                        <select>
+                            <option>India</option>
+                            <option>USA</option>
+                        </select>
+                        <input placeholder="Phone number"></input>
+                    </div>
+                    <input placeholder="Password"></input> 
+                    <input placeholder="Confirm Password"></input> 
+                    <Link to='/login'>
+                        <button>CREATE AN ACCOUNT</button>  
+                    </Link>
+                    <label>
+                        Already have an account?
+                        <Link to='/login'>
+                            <a>Login</a>
+                        </Link>
+                    </label>
+                </form>      
+            </div> 
+      </div>)
 }
 
 export default Register

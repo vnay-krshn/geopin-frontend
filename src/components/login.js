@@ -5,17 +5,23 @@ function Login(){
 
     return(
     <div className="login">
-        <h2>Login</h2>
-        <form>
-            <input placeholder="name"></input>    
-            <input placeholder="password"></input> 
-            <Link to='/homepage'>
-                <button>Login</button>  
-            </Link>
-            <Link to='/register'>
-                <a href='#'>Go back to register</a>
-            </Link>
-        </form>
+        <img src='/imgs/logo.svg'></img>
+        <div className="login-box">
+            <h3>LOGIN</h3>
+            <form className="login-form">
+                <input placeholder="Name"></input>    
+                <input placeholder="Password"></input> 
+                    <Link to='/homepage'>
+                        <button>LOGIN</button>  
+                    </Link>
+                    <label>
+                        Don't have an account?
+                        <Link to='/register'>
+                            <a>Register Now</a>
+                        </Link>
+                    </label>
+            </form>
+        </div>
     </div>)
 }
 

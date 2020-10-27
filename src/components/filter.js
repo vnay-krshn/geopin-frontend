@@ -1,6 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import {OptionsContext} from './optionsContext'
 
 const Filter=()=>{
+
+    const {visibility} = useContext(OptionsContext)
+    const[visible, setvisibility] = visibility
+
     return(
         <div className="filter">
             <input placeholder="visitor's nationality"></input>
@@ -9,7 +14,7 @@ const Filter=()=>{
                 <input placeholder="visited year"></input>
             </div>
             <input placeholder="visitor's rating"></input>
-            <button>Done</button>
+            <button onClick={()=>{setvisibility(!visible)}}>Done</button>
         </div>
     )
 }

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Ratings from './ratings'
+import {OptionsContext} from './optionsContext'
 
 const Review =()=>{
+    const {visibility} = useContext(OptionsContext)
+
+    const[visible, setvisibility] = visibility
+
     return(
     <div className="review">
         <div className="review-box">
@@ -11,7 +16,7 @@ const Review =()=>{
                 <Ratings size={20}/>
             </div>
         </div>
-        <button>Done</button>
+        <button onClick={()=>setvisibility(!(visible))}>Done</button>
     </div>)
 }
 

@@ -12,7 +12,7 @@ function CheckInPage(){
     return(
     <div className="checkInPage">
        <HomepageNav/>
-       <h2>Check into a location</h2>
+       <h2>CHECK INTO YOUR DREAM LOCATION</h2>
        <Options option={option} optroute={optroute}/>
     </div>)
 }

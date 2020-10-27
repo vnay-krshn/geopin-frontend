@@ -9,7 +9,7 @@ const PlacesLogged =({location, place, description,date})=>{
                     <label>{location}</label>
                     <label>{place}</label>
                 </div>
-                <DateRating date={date} size={10}/>
+                <DateRating date={date} size={11}/>
             </div>
             <img src='/imgs/side_image-2x.png'></img>
             <div className="placesLogged-descr">

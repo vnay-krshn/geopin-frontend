@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import HomepageNav from './homepageNav'
 import Options from './options'
 import {OptionsContext} from './optionsContext'
@@ -9,10 +9,11 @@ import PlaceInfo from './placeinfo'
 import Filter from './filter'
 
 function SearchResults(){
-    const {feature, featureroute} = useContext(OptionsContext)
+    const {feature, featureroute, visibility} = useContext(OptionsContext)
 
     const[option, setoption] = feature
     const[optroute, setroute] = featureroute
+    const[visible, setvisibility] = visibility
 
     return(
     <div className='searchResults'>
@@ -20,16 +21,14 @@ function SearchResults(){
         <div className='searchResults-options'>
             <Options option={option} optroute={optroute}/>
         </div>
-        <div>
-            <Maps/>
-            <PlaceInfo/>
-        </div>
+        <Maps/>
+        <PlaceInfo/>     
         <div className='visitor-details'>
             <div className='visitor-details-header'>
                 <h3>Recent visitors of PLACE_NAME</h3>
                 <ul>
                     <li>Filter</li>
-                    <li><img src='/imgs/filter_icon.svg'></img></li>
+                    <li><img onClick={()=>setvisibility(!(visible))} src='/imgs/filter_icon.svg'></img></li>
                 </ul>
             </div>
 
@@ -38,9 +37,9 @@ function SearchResults(){
                     <Visitors username={data.name} date={data.date} phone={data.phone} key={key}/>
                 ))}
             </div>
-         <button>More</button>
+            <button>More</button>
         </div>
-        <Filter/>
+        {visible && <Filter visibile={visible}/>}
     </div>)
 }
 

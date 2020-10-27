@@ -24,13 +24,13 @@ function Homepage(){
         <div className='homepage'>
             <HomepageNav/>
             <div className="home-display">
-                <h2>Do you need to check in your location or find a new desination?</h2>
+                <p>Do you need to check in your <strong>location</strong> or find a new <strong>desination</strong>?</p>
                 <div className="home-options">
                     <Link to='/search'>
-                        <button onClick={setSearch}>Search</button>
+                        <button onClick={setSearch}>SEARCH</button>
                     </Link>
                     <Link to='/checkIn'>
-                        <button onClick={setCheckin}>Check in</button>
+                        <button onClick={setCheckin}>CHECK IN</button>
                     </Link>
                 </div>
             </div>

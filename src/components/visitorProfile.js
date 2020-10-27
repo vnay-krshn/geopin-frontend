@@ -5,8 +5,9 @@ import {visitors} from '../temp2'
 
 const VisitorProfile=()=>{
     return(
-    <div>
+    <div className="visitor-profile">
         <ProfileHead/>
+        <button id="save">Save contact</button>
         <div className="place-cards-container">
             <label id="numberLog">Places Logged : 12</label>
             <div className="place-cards">

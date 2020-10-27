@@ -3,10 +3,16 @@
     padding: 0;
 }
 
-/* Homepage */
+/* LandingPage */
+
+.landingpage{
+    /* background:rgb(6, 97, 59) ; */
+    background-image: url('/imgs/bg.png');
+    min-height: 100vh;
+}
 
 .landing-nav{
-    background: rgb(2, 185, 109);
+    /* background: rgb(2, 185, 109); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,42 +33,56 @@
     list-style: none;
     text-decoration: none;
     color:white;
+    border: none;
 }
 
-.landingpage{
-    background:rgb(6, 97, 59) ;
-    min-height: 80vh;
+.landingpage #logo{
+    height: 16vh;
+    width: 56vw;
+    margin: 7em 16.5em;
 }
 
-/* Register */
-
-.register form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.register form a{
-    text-decoration: none;
-    margin: 1em;
-}
-
-.register h2{
+.landingpage .tagline{
+    /* background: chartreuse; */
     text-align: center;
-    margin:1em;
+    width: 45vw;
+    margin: 0 auto;
+    margin-top: -5em;
+    color: white;
+
+    font-size: 0.9em;
+}
+
+.landingpage .tagline button{
+    background: #00d3b8;
+    border: none;
+    color: white;
+    padding: 1em 5em;
+    margin: 2em;
+    font-size: 1em;
 }
 
 /* howItWorks */
 
+.howItWorks{
+    background-image: url('/imgs/how_it_works_bg.png');
+    padding: 2em;
+    
+}
+
 .howItWorks h1{
-    color: rgb(89, 0, 255);
+    color: black;
     text-align: center;
     margin: 0.8em;
+
+    font-size: 2em;
 }
 
 .howItWorks h4{
+    color: #c9c5c5;
     text-align: center;
+    font-size: 1em;
+    margin-top: -1em;
 }
 
 .icon-container{
@@ -73,68 +93,270 @@
     margin: 2.5em;
 }
 
-/* Contact */
-
-.footer{
-    min-height: 70vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background: darkblue;
-}
-
-.footer h2{
-    color: white;
-}
 
 /* Features */
 
 .card{
-     width: 30%;
-     display: flex;
-     text-align: center;
-     flex-direction: column;
-     align-items:center;
-     justify-content: space-evenly;
-     /*background: cyan;*/
- }
-
- .card img{
-    width: 20%;
-    margin: 1.5em;
- }
-
- .card h4{
-     margin:1em;
- }
-
-/* Login */
-
-.login a{
-    color:black;
-}
-
-.login form{
+    width: 28%;
     display: flex;
+    text-align: center;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items:center;
+    justify-content: space-evenly;
+    /*background: cyan;*/
 }
 
-.login h2{
-    text-align: center;
+.card img{
+   width: 20%;
+   margin: 1.5em;
+}
+
+.card h4{
+    color: black;
     margin:1em;
 }
 
-.login form a{
+/* Contact */
+
+.footer{
+    height: 100vh;
+    background-image: url('/imgs/contact_bg.png');
+}
+
+.footer .footer-form{
+    /* background: rebeccapurple; */
+    display: flex;
+    flex-flow: wrap column;
+    width: 25vw;
+
+    position: relative;
+    left: 12em;
+    top: 10em;
+}
+
+.footer-form input, .footer-form textarea{
+    margin: 0.15em 0em;
+    padding: 0.75em;
+    border-radius: 0.25em;
+    border: none;
+}
+
+.footer-form textarea{
+    resize: none;
+    height: 8em;
+}
+
+.footer-form button{
+    margin: 0.15em 0em;
+    padding: 1em 1em;
+    width: 8vw;
+   
+
+    border-radius: 0.25em;
+    border: none;
+    background: #00d3b8;
+    color: #ffff;
+}
+
+.footer-details{
+    /* background: red; */
+    color: #ffff;
+    width: 35vw;
+    display: flex;
+
+    position: relative;
+    left: 42em;
+    bottom: 6.5em;
+}
+
+.footer-details-type{
+    /* background: salmon; */
+    display: flex;
+    flex-direction: column;
+    width: 5em;
+    padding: 0em 0.75em;
+    align-items: flex-start;
+}
+
+.footer-details-type label{
+    margin: 0.7em 0em;
+}
+
+.footer-details-colon{
+    /* background: seagreen; */
+    display: flex;
+    flex-direction: column;
+    width: 2em;
+    align-items: center;
+}
+
+.footer-details-colon label{
+    margin: 0.7em 0em;
+}
+
+.footer-details-info{
+    /* background: rgb(218, 228, 87); */
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+}
+
+.footer-details-info label{
+    margin: 0.7em 1em;
+}
+/* footer */
+
+#footer-image{
+    margin-top: 5em;
+    margin-left: 0em;
+    width: 70%;
+
+}
+
+/* Register */
+
+.register{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
+
+.register img{
+    margin: 2em 35.6em;
+}
+
+.register-box{
+    /* background: turquoise; */
+    width: 25vw;
+    margin: 1em 30em;
+}
+
+.register-box h3{
+    font-weight: 400;
+    color: #ffff;
+    padding: 0.5em 0em;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: #bed1cf; */
+}
+
+.register-form input{
+    padding: 0.75em;
+    margin: 0.25em 0;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.register-form .phone{
+    display: flex;
+    align-items: flex-end;
+    /* background: saddlebrown; */
+}
+.register-form .phone input{
+   margin-left: 0.5em;
+   width: 20vw;
+   border: none;
+   outline: none;
+    /* background: saddlebrown; */
+}
+
+.register-form select{
+    height: 2.7em;
+    margin-bottom: 0.2em;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.register-form button{
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+    width: 25vw;
+    padding: 0.8em;
+    margin-top: 0.25em;
+    border-radius: 0.2em;
+}
+
+.register-form label{
+    color:#ffff;
+    margin:1em 2.9em;
+}
+
+.register-form label a{
     text-decoration: none;
-    margin: 1em;
+    color: #00d3b8;
+    margin-left: 0.2em;
+}
+
+/* Login */
+
+.login{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
+
+.login img{
+    margin: 2em 35.6em;
+}
+.login-box{
+    /* background: turquoise; */
+    width: 25vw;
+    margin: 1em 30em;
+}
+
+.login-box h3{
+    font-weight: 400;
+    color: #ffff;
+    padding: 0.5em 0em;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: #bed1cf; */
+}
+
+.login-form input{
+    padding: 0.75em;
+    margin: 0.25em 0;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.login-form button{
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+    width: 25vw;
+    padding: 0.8em;
+    margin-top: 0.25em;
+    border-radius: 0.2em;
+}
+
+.login-form label{
+    color:#ffff;
+    margin:1em 1.5em;
+}
+
+.login-form label a{
+    text-decoration: none;
+    color: #00d3b8;
+    margin-left: 0.2em;
 }
 
 /* homepageNav */
 
 .homepage-nav{
-    background: rgb(2, 58, 34);
+    background: #314049;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,58 +373,121 @@
     color:white;
 }
 
+.homepage-nav ul img{
+    border-radius: 2.4em;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+.homepage-nav ul li{
+    color: #ffff;
+}
+
 /* homepage */
 
 .homepage{
-    background:rgb(6, 97, 59) ;
-    min-height: 90vh;
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
 }
 
 .home-display{
+    /* background: tomato; */
     text-align: center;
-    padding: 10em;
+    margin: 4em auto;
+    height: 10em;
+    width: 19em;
     color: white;
+
+    font-size: 1.7em;
 }
 
 .home-options{
     display: flex;
     justify-content: space-around;
     align-items: center;
-   /* border: violet solid 3px;*/
-    width: 20%;
+    /* border: violet solid 3px; */
+    width: 30vw;
     margin: 2em auto;
+}
+
+.home-options button{
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+    width: 15vw;
+    padding: 0.8em;
+    margin: 0.25em 0.8em;
+    border-radius: 0.2em;
 }
 
 /* options */
 
 .options{
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*border: violet solid 3px;*/
-    width: 20%;
-    margin: 0 auto;
+    /* border: violet solid 3px; */
+    width: 50%;
+    margin: 0 20em;
 }
 
-/* search page */
+.options input{
+    padding: 0.75em;
+    margin: 0.25em 0.5em 0.25em 0em ;
+    width: 80vw;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.options button{
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+    width: 10vw;
+    padding: 0.8em;
+    border-radius: 0.2em;
+}
+
+/* searchPage */
+
+.searchpage{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
 
 .searchpage h2{
-   text-align: center;
-   margin: 3em;
+   margin: 5em  0em 2em 19em;
+   color:#ffff;
+   font-weight: 400;
 }
 
 /* check in page */
 
+.checkInPage{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
+
 .checkInPage h2{
-    text-align: center;
-    margin: 3em;
+    margin: 5em  0em 2em 19em;
+    color:#ffff;
+    font-weight: 400;
  }
 
  /* search result page */
 
  .searchResults-options{
-     padding: 2em;
-     background: chartreuse;
+     padding: 2em 0em 1em 0em;
+     background:#314049;
+     opacity: 0.9;
+     height: 10vh;
+     width: 78.95em;
+     position: absolute;
+     z-index: 100;
  }
 
  .visitor-details{
@@ -211,14 +496,21 @@
  }
 
  .visitor-details button{
-     margin-left: 67em;
+     margin: 0.5em 0em 0em 60em;
+     background-color: #00d3b8;
+     color: #ffff;
+     border: none;
+     outline: none;
+     width: 10vw;
+     padding: 0.8em;
+     border-radius: 0.2em;
  }
 
  .visitor-details-header{
-    /* background: green;*/
-     margin: 1em;
-     display: flex;
-     justify-content: space-between;
+    /* background: green; */
+    margin: 1em 1em 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
  }
  .visitor-details-cards{
      /* background: chocolate; */
@@ -228,49 +520,34 @@
  }
 
  .visitor-details-header ul{
-    /*background: #5d5d5d;*/
+    /* background: #5d5d5d; */
     width: 8%;
     list-style: none;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
+    
 }
 
  /* check in result page */
 
  .checkinResults-options{
-    padding: 2em;
-    /*background: chartreuse;*/
+    padding: 2em 0em 1em 0em;
+    background:#314049;
+    opacity: 0.9;
+    height: 10vh;
+    width: 78.95em;
+    position: absolute;
+    z-index: 100;
 }
 
 /* maps */
 
-#map {
-    width: 100%;
-    height: 100%;
-    /* z-index: 100; */
-  }
-  
-  #mapSearchContainer {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    height: 30px;
-    width: 180px;
-    /* z-index: 110; */
-    font-size: 10pt;
-    color: #5d5d5d;
-    border: solid 1px #bbb;
-    background-color: #f8f8f8;
-  }
-  
-  .pointer {
+.leaflet-control-container{
     position: absolute;
-    top: 86px;
-    left: 60px;
-    /* z-index: 99999; */
-  }
-  
+    top: 10em;
+}
+
   .geocoder-control-input {
     background-image: url("https://raw.githubusercontent.com/Esri/esri-leaflet-geocoder/master/src/img/search.png");
   }
@@ -292,7 +569,7 @@
   .visitor{
       position: relative;
       margin: 1em;
-      background: #61b0b8;
+      background: #ebf5f6;
       display: flex;
       width: 43%;
       min-height: 10vh;
@@ -312,45 +589,101 @@
     display: grid;
     grid-template-columns: repeat(2,9em);
     grid-template-rows: repeat(2,2em);
-    
-  }
+   }
+
+.visitor-info #username{
+    color: black;
+}
 
   /* place info*/
 
   .placeInfo{
-     background: darkblue;
+     background: #314049;
      color: white;
      display: flex;
      justify-content: space-evenly;
-     width: 78vw;
-     padding: 1em;
-     margin:1em auto;
+     width: 71vw;
+          
+
+     position: absolute;
+     z-index: 100;
+     top: 32em;
+     left: 11em;
+  }
+
+  .placeInfo img{
+      margin: 0.25em 0em;
+      width: 38vh;
   }
   
   .information{
-      background: violet;
+      /* background: #21aaff; */
       width: 26em;
-      padding: 1em;
+      padding:1em 0em 0em 0.8em;
+      
   }
 
   .information h2{
-      margin-bottom:0.5em;
+      font-size: large;
+      margin-bottom:0.7em;
   }
-
   .details{
-      padding: 1em;
-      background: tomato;
-      width: 18em;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-  }
+    /* background: red; */
+    color: #ffff;
+    width: 18vw;
+    display: flex;
 
-  .details .rate{
-     margin: 0 auto;
-     background: rgb(2, 185, 109);
-     width: 8em;
-  }
+    position: relative;
+}
+
+.details-type{
+    /* background: salmon; */
+    display: flex;
+    flex-direction: column;
+    width: 5em;
+    padding: 1.2em 0.75em;
+    align-items: flex-start;
+}
+
+.details-type label{
+    margin: 0.7em 0em;
+}
+
+.details-colon{
+    /* background: seagreen; */
+    display: flex;
+    flex-direction: column;
+    width: 2em;
+    align-items: center;
+    padding: 1.2em 0em;
+}
+
+.details-colon label{
+    margin: 0.7em 0em;
+}
+
+.details-type label, .details-colon label, .details-info label{
+    font-size: small;
+}
+
+.details-info{
+    /* background: rgb(218, 228, 87); */
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+    padding: 1.5em 0em;
+}
+
+.details-info #visitor-num{
+    margin-bottom: 1.2em;
+    margin-left: 0.7em;
+    margin-top: 0.4em;
+}
+
+.details-info #zip{
+    margin-top: 1.3em;
+    margin-left: 0.7em;
+}
 
   /* filter */
 
@@ -358,9 +691,15 @@
       margin: 2em;
       display: flex;
       flex-direction: column;
-      background: #5d5d5d;
+      background: #ebf5f6;
       width: 30vw;
       justify-content: space-evenly;
+
+     position: absolute;
+     top: 47.9em;
+     left: 44em;
+     border-radius: 0.3em;
+     box-shadow: #e6e4e4 -1px 1px 5px;
   }
 
   .filter div{
@@ -369,15 +708,24 @@
       width: 30vw;
   }
 
+  .filter button{
+    background-color: #00d3b8;
+    color: #ffff;
+  }
+
   .filter input,.filter button{
       padding: 0.5em;
       margin:0.5em;
+      border: none;
+      outline: none;
+      border-radius: 0.2em;
   }
 
   /* profile head */
 
   .profileHead-header{
-      background: rgb(3, 107, 3);
+      background-image: url('/imgs/bg.png');
+      background-position: -4em -8em;
       display: flex;
       justify-content: space-evenly;
       min-height: 28vh;
@@ -427,14 +775,6 @@
 .profileHead-header .profileHead-nationality img{
       max-width: 2em;
   }
-.profileHead-header #save{
-    padding: 1em;
-    height: 8vh;
-
-    position: relative;
-    top: 8.8em;
-    left: -11em;
-}
 
 /* profile contact */
 
@@ -449,14 +789,14 @@
     width: 8em;
 
     position: relative;
-    top: 7.3em;
-    left: -2.5em;
+    top: 7em;
+    left: -12em;
 }
 
 /* placesLogged */
 
 .placesLogged{
-    background: violet;
+    background:#ebf5f6;
     display: flex;
     margin: 0.5em;
     width: 40%;
@@ -474,7 +814,7 @@
 .placesLogged-header{
     display: flex;
     justify-content: space-between;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 .placesLogged-descr{
@@ -489,7 +829,7 @@
 /* visitor profile */
 
 .place-cards-container{
-    background: turquoise;
+    /* background: turquoise; */
     padding: 6em 1em;
 }
 
@@ -498,8 +838,17 @@
 }
 
 .place-cards-container button{
-    margin-left: 80em;
-    padding: 0.55em;
+    margin-left: 74.2em;
+    margin-top: 0.2em;
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+
+    width: 10vw;
+    height: 7.5vh;
+    padding: 0.8em;
+    border-radius: 0.2em;
 }
 
 .place-cards{
@@ -507,6 +856,22 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 1em;
+}
+
+.visitor-profile #save{
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+
+    position: absolute;
+    top: 15.8em;
+    left: 69.5em;
+
+    width: 10vw;
+    height: 7.5vh;
+    padding: 0.8em;
+    border-radius: 0.2em;
 }
 
 /* date-rating */
@@ -521,21 +886,22 @@
     min-height: 8vh;
 }
 
-/* .date-rating #date{
-    margin-left: 1em;
-} */
-
 /* Review */
 
 .review{
-    background: rgb(173, 173, 224);
+    /* background: rgb(173, 173, 224); */
     width: 30vw;
     height: 50vh;
     padding: 1em;
+
+    position: absolute;
+    top:11.5em;
+    left: 26em;
+    z-index: 100;
 }
 
 .review-box{
-    border:1px solid black;
+    border:none;
     width: 20.9em;
     margin: 1em;
 }
@@ -547,6 +913,7 @@
     border-top:none;
     border-left: none;
     border-right: none;
+    border-bottom: #c9c5c5 solid 1.2px;
     resize: none;
 }
 
@@ -554,10 +921,19 @@
     display: flex;
     padding: 0.7em;
     justify-content: space-between;
-    width: 20em;
+    width: 19.5em;
+    margin-top: -0.3em;
+    background: #ffff;
 }
 
 .review button{
-    margin: 1em 23em;
+    margin: 0em 0em 0.5em 16.8em;
+    background-color: #00d3b8;
+    color: #ffff;
+    border: none;
+    outline: none;
+    width: 10vw;
+    padding: 0.8em;
+    border-radius: 0.2em;
 }
 

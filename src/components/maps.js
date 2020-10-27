@@ -36,7 +36,7 @@ class Maps extends Component {
     const center = [37.7833, -122.4167];
     return (
       <Map
-        style={{ height: "60vh" }}
+        style={{ height: "100vh", zIndex:1}}
         center={center}
         zoom="10"
         ref={m => {
@@ -47,7 +47,7 @@ class Maps extends Component {
           attribution="&copy; <a href='https://osm.org/copyright'>OpenStreetMap</a> contributors"
           url={"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}
         />
-        <div className="pointer" />
+        <div className="pointer"/>
       </Map>
     );
   }

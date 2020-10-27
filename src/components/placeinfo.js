@@ -12,9 +12,21 @@ const PlaceInfo=()=>{
             point elevation is 480 feet (150 m) above sea level.</p>
         </div>
         <div className="details">
-            <label>Visitors : 476</label>
-            <label>Ratings : </label><Ratings size={10}/>
-            <label>Zip : 1108</label>
+            <div className="details-type">
+                <label>Visitors</label>
+                <label>Ratings</label>
+                <label>Zip</label>
+            </div>
+            <div className="details-colon">
+                <label>:</label>
+                <label>:</label>
+                <label>:</label>
+            </div>
+            <div className="details-info">
+                <label id="visitor-num">476</label>
+                <Ratings size={10}/>
+                <label id="zip">1108</label>
+            </div>
         </div>
     </div>)
 }

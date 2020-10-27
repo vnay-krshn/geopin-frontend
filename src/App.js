@@ -11,6 +11,7 @@ import SearchResults from './components/searchResultPage';
 import CheckinResults from './components/checkinResultPage'
 import {OptionProvider} from './components/optionsContext'
 import VisitorProfile from './components/visitorProfile'
+import UserProfile from './components/userprofile'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/searchResults' component={SearchResults}/>
             <Route path='/checkinResults' component={CheckinResults}/>
             <Route path='/visitorProfile' component={VisitorProfile}/>
+            <Route path='/userProfile' component={UserProfile}/>
           </Switch>
       </Router>
     </div>
