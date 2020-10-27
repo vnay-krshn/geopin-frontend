@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import HomepageNav from './homepageNav'
-import Options from './options'
-import {OptionsContext} from './optionsContext'
-import Maps from './maps'
-import Visitors from './visitors'
+import HomepageNav from '../comp/homepageNav'
+import Options from '../comp/options'
+import {OptionsContext} from '../comp/optionsContext'
+import Maps from '../comp/maps'
+import Visitors from '../comp/visitors'
 import {users} from '../temp'
-import PlaceInfo from './placeinfo'
-import Filter from './filter'
+import PlaceInfo from '../comp/placeinfo'
+import Filter from '../comp/filter'
 
 function SearchResults(){
     const {feature, featureroute, visibility} = useContext(OptionsContext)

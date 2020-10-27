@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import HomepageNav from './homepageNav'
-import {OptionsContext} from './optionsContext'
+import HomepageNav from '../comp/homepageNav'
+import {OptionsContext} from '../comp/optionsContext'
 
 function Homepage(){
 

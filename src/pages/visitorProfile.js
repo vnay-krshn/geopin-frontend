@@ -1,6 +1,6 @@
 import React from 'react'
-import PlacesLogged from './placesLogged'
-import ProfileHead from './profileHead'
+import PlacesLogged from '../comp/placesLogged'
+import ProfileHead from '../comp/profileHead'
 import {visitors} from '../temp2'
 
 const VisitorProfile=()=>{

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import HomepageNav from './homepageNav'
-import Options from './options'
-import {OptionsContext} from './optionsContext'
-import Maps from './maps'
-import PlaceInfo from './placeinfo'
-import Review from './review'
+import HomepageNav from '../comp/homepageNav'
+import Options from '../comp/options'
+import {OptionsContext} from '../comp/optionsContext'
+import Maps from '../comp/maps'
+import PlaceInfo from '../comp/placeinfo'
+import Review from '../comp/review'
 
 function CheckinResults(){
     const {feature, featureroute, visibility} = useContext(OptionsContext)

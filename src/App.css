@@ -937,3 +937,59 @@
     border-radius: 0.2em;
 }
 
+/* user-profile */
+
+.userprofile .profileHead .profileHead-contact{
+    left: -2.5em;
+}
+
+.userprofile .edit{
+    background:transparent;
+    border: #00d3b8 solid 0.1em;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    color: #00d3b8;
+
+    position: absolute;
+    top: 8em;
+    left: 76em;
+}
+
+.userprofile-cards .sidebar{
+    background: #b9d8eb;
+    width: 18em;
+    margin:6em 12em;
+}
+
+.userprofile-cards .sidebar .search-post{
+    background:#ebf5f6;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.4em;
+    margin-bottom: 1em;
+   
+    border:none;
+    outline: none;
+}
+
+.userprofile-cards .sidebar .search-post input{
+    border: none;
+    margin-right: 0.3em;
+    height: 6vh;
+    width: 16em;
+    padding: 0.2em 1em;
+}
+
+.userprofile-cards .sidebar .search-post button{
+    height: 7vh;
+    width: 3.6vw;
+    padding: 0.8em;
+    background: #00d3b8;
+    outline: none;
+    border:none;
+}
+
+
+

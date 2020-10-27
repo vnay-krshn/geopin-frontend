@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import HomepageNav from './homepageNav'
-import Options from './options'
-import {OptionsContext} from './optionsContext'
+import HomepageNav from '../comp/homepageNav'
+import Options from '../comp/options'
+import {OptionsContext} from '../comp/optionsContext'
 
 function SearchPage(){
     const {feature, featureroute} = useContext(OptionsContext)

@@ -1,17 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Homepage from './components/homepage';
-import Landingpage from './components/landingPage';
-import Login from './components/login';
-import Register from './components/register';
-import SearchPage from './components/searchpage';
-import CheckInPage from './components/checkInPage'
-import SearchResults from './components/searchResultPage';
-import CheckinResults from './components/checkinResultPage'
-import {OptionProvider} from './components/optionsContext'
-import VisitorProfile from './components/visitorProfile'
-import UserProfile from './components/userprofile'
+import Homepage from './pages/homepage';
+import Landingpage from './pages/landingPage';
+import Login from './pages/login';
+import Register from './pages/register';
+import SearchPage from './pages/searchpage';
+import CheckInPage from './pages/checkInPage'
+import SearchResults from './pages/searchResultPage';
+import CheckinResults from './pages/checkinResultPage'
+import VisitorProfile from './pages/visitorProfile'
+import UserProfile from './pages/userprofile'
+
+import {OptionProvider} from './comp/optionsContext'
 
 function App() {
 

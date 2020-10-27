@@ -26,6 +26,7 @@ class Maps extends Component {
 
     searchControl.on("results", function(data) {
       results.clearLayers();
+      console.log(data)
       for (let i = data.results.length - 1; i >= 0; i--) {
         results.addLayer(L.marker(data.results[i].latlng));
       }
@@ -47,7 +48,6 @@ class Maps extends Component {
           attribution="&copy; <a href='https://osm.org/copyright'>OpenStreetMap</a> contributors"
           url={"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}
         />
-        <div className="pointer"/>
       </Map>
     );
   }

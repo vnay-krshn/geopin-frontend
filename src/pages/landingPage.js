@@ -1,6 +1,6 @@
 import React from 'react'
-import Contact from './contact';
-import HowItWorks from './howItWorks';
+import Contact from '../comp/contact';
+import HowItWorks from '../comp/howItWorks';
 import {animateScroll as scroll} from 'react-scroll'
 import {Link} from 'react-router-dom'
 
@@ -22,7 +22,7 @@ function Landingpage(){
                         <li onClick={toggleMid}>How it works</li>
                         <li onClick={toggleBttm}>Contact</li>
                         <Link to='/register'>
-                             <a href='#'><img src='/imgs/login_link.png'></img></a>
+                             <a><img src='/imgs/login_link.png'></img></a>
                         </Link>
                     </ul>
                 </nav>
