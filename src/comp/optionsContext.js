@@ -3,15 +3,17 @@ import React, { createContext, useState } from 'react'
 export const OptionsContext = createContext()
 
 export const OptionProvider=(props)=>{
-    const[option, setoption] = useState('')
-    const[optroute, setroute] = useState('')
-    const[visible, setvisibility] = useState(false)
+    
+    const[visibleFilter, setFilterVisible] = useState(false)
+    const[visibleReview, setReviewVisible] = useState(false)
 
     return(
    <OptionsContext.Provider value={
-       {feature:[option, setoption],
-        featureroute:[optroute, setroute],
-        visibility:[visible, setvisibility]}}>
+                {
+                    filterVisibility:[visibleFilter, setFilterVisible],
+                    reviewVisibility:[visibleReview, setReviewVisible]
+                }}>
        {props.children}
    </OptionsContext.Provider>)
 }
+

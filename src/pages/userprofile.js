@@ -1,8 +1,11 @@
 import React from 'react'
 import ProfileHead from '../comp/profileHead'
+import {visitors} from '../temp2'
 import {recentSearches} from '../temp3'
 import {savedContacts} from '../temp4'
 import LatestSearch from '../comp/latestSearch'
+import PlacesLogged from '../comp/placesLogged'
+import UserEdit from '../comp/userEdit'
 
 const UserProfile = ()=>{
 return(
@@ -23,7 +26,7 @@ return(
             </div>
             <div className="saved-contacts">
                 <div className="title">Saved contacts</div>
-                <div className="contacts-images">
+                <div className="contact-images">
                     {savedContacts.map((items)=>(
                         <img src={items.image}></img>
                     ))}
@@ -31,9 +34,14 @@ return(
             </div>
         </div>
         <div className="main">
-        
-        </div>    
+                {visitors.slice(0,2).map((data,key)=>(
+                    <PlacesLogged date={data.date} location={data.location} place={data.place} description={data.description} key={key}/>
+                ))}
+        </div>  
+        <label style={{position:"absolute", right:'13em',top:'20em'}}>Places logged : 12</label>
     </div> 
+    <button id="more">MORE</button> 
+    <UserEdit/> 
 </div>)
 }
 

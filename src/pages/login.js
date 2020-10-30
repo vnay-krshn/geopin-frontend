@@ -1,12 +1,14 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
 
-function Login(){
+const Login=()=>{
 
     return(
     <div className="login">
-        <img src='/imgs/logo.svg'></img>
-        <div className="login-box">
+         <Link to='/'>
+                <img src='/imgs/logo.svg'></img>
+         </Link>
+         <div className="login-box">
             <h3>LOGIN</h3>
             <form className="login-form">
                 <input placeholder="Name"></input>    

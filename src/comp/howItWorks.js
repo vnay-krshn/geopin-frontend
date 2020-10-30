@@ -2,7 +2,7 @@ import React from 'react'
 import Features from './features'
 
 
-function HowItWorks(){
+const HowItWorks=()=>{
     return(
     <div className="howItWorks">
         <h1>HOW IT WORKS</h1>

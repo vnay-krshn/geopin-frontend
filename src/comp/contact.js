@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Contact(){
+const Contact=()=>{
     return(
     <div className="footer">
         <form className="footer-form">

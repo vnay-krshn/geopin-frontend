@@ -26,10 +26,18 @@ class Maps extends Component {
 
     searchControl.on("results", function(data) {
       results.clearLayers();
-      console.log(data)
-      for (let i = data.results.length - 1; i >= 0; i--) {
-        results.addLayer(L.marker(data.results[i].latlng));
-      }
+      var i = data.results.length - 1
+      data.results.forEach(item => {
+        if(i>=0)
+        {
+          results.addLayer(L.marker(data.results[i].latlng));
+          i--;
+        }
+      });
+
+      // for (let i = data.results.length - 1; i >= 0; i--) {
+      //   results.addLayer(L.marker(data.results[i].latlng));
+      // }
     });
   }
 

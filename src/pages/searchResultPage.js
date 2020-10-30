@@ -8,18 +8,16 @@ import {users} from '../temp'
 import PlaceInfo from '../comp/placeinfo'
 import Filter from '../comp/filter'
 
-function SearchResults(){
-    const {feature, featureroute, visibility} = useContext(OptionsContext)
+const SearchResults=()=>{
+    const {filterVisibility} = useContext(OptionsContext)
 
-    const[option, setoption] = feature
-    const[optroute, setroute] = featureroute
-    const[visible, setvisibility] = visibility
+    const[visibleFilter, setFilterVisible] = filterVisibility
 
     return(
     <div className='searchResults'>
         <HomepageNav/>
         <div className='searchResults-options'>
-            <Options option={option} optroute={optroute}/>
+            <Options option={'Search'}/>
         </div>
         <Maps/>
         <PlaceInfo/>     
@@ -28,7 +26,7 @@ function SearchResults(){
                 <h3>Recent visitors of PLACE_NAME</h3>
                 <ul>
                     <li>Filter</li>
-                    <li><img onClick={()=>setvisibility(!(visible))} src='/imgs/filter_icon.svg'></img></li>
+                    <li><img onClick={()=>setFilterVisible(!(visibleFilter))} src='/imgs/filter_icon.svg'></img></li>
                 </ul>
             </div>
 
@@ -39,7 +37,7 @@ function SearchResults(){
             </div>
             <button>More</button>
         </div>
-        {visible && <Filter visibile={visible}/>}
+        {visibleFilter && <Filter/>}
     </div>)
 }
 

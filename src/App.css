@@ -4,11 +4,13 @@
 }
 
 /* LandingPage */
-
-.landingpage{
+.landingpage-main{
     /* background:rgb(6, 97, 59) ; */
     background-image: url('/imgs/bg.png');
-    min-height: 100vh;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .landing-nav{
@@ -16,10 +18,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 15vh;
+    height: 15vh;
 }
 
 .landing-nav ul{
+    /* background: silver; */
     width: 50%;
     display: flex;
     justify-content: space-around;
@@ -29,20 +32,19 @@
     color:white;
 }
 
-.landing-nav a{
-    list-style: none;
-    text-decoration: none;
-    color:white;
+.landing-nav #login-button{
     border: none;
+    outline: none;
 }
 
-.landingpage #logo{
+
+.landingpage-main #logo{
     height: 16vh;
     width: 56vw;
     margin: 7em 16.5em;
 }
 
-.landingpage .tagline{
+.landingpage-main .tagline{
     /* background: chartreuse; */
     text-align: center;
     width: 45vw;
@@ -53,13 +55,65 @@
     font-size: 0.9em;
 }
 
-.landingpage .tagline button{
+.landingpage-main .tagline button{
     background: #00d3b8;
     border: none;
     color: white;
     padding: 1em 5em;
     margin: 2em;
     font-size: 1em;
+    border-radius: 0.2em;
+}
+
+.landingpage-main .tagline button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
+.landingpage-main li:hover{
+    color: #00d3b8;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+   .landing-nav{
+        height: auto;
+    }
+
+   .landing-nav ul{
+       flex-direction: column;
+       margin-top: 1em;
+   }
+
+   .landing-nav ul li, #login-button{
+        margin: 1em auto;
+   }
+
+   .landingpage-main #logo{
+    height: 9vh;
+    width: 76vw;
+    margin: 3em;
+  }
+
+   .landingpage-main .tagline{
+    /* background: chartreuse; */
+    text-align: center;
+    width: 65vw;
+    margin:0em 9.5em ;
+    color: white;
+    font-size: 0.6em;
+  }
+
+  .landingpage-main .tagline button{
+    background: #00d3b8;
+    border: none;
+    color: white;
+    padding: 1em 2.5em;
+    margin: 2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+  }
+
 }
 
 /* howItWorks */
@@ -93,6 +147,12 @@
     margin: 2.5em;
 }
 
+@media (max-width:768px){
+    .icon-container{
+        flex-direction: column;
+    }
+}
+
 
 /* Features */
 
@@ -116,11 +176,30 @@
     margin:1em;
 }
 
+@media(max-width:768px){
+    .card{
+        width: 68%;
+        margin:1em auto;
+    }
+
+    .card img{
+        margin: 1em;
+    }
+     
+    .card h4{
+        color: black;
+        margin:1.2em;
+    }
+}
+
 /* Contact */
 
 .footer{
     height: 100vh;
     background-image: url('/imgs/contact_bg.png');
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;  
 }
 
 .footer .footer-form{
@@ -128,10 +207,6 @@
     display: flex;
     flex-flow: wrap column;
     width: 25vw;
-
-    position: relative;
-    left: 12em;
-    top: 10em;
 }
 
 .footer-form input, .footer-form textarea{
@@ -144,6 +219,7 @@
 .footer-form textarea{
     resize: none;
     height: 8em;
+    font-family: sans-serif;
 }
 
 .footer-form button{
@@ -158,15 +234,17 @@
     color: #ffff;
 }
 
+.footer-form button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
 .footer-details{
     /* background: red; */
     color: #ffff;
     width: 35vw;
     display: flex;
-
-    position: relative;
-    left: 42em;
-    bottom: 6.5em;
+    height: 34vh;
 }
 
 .footer-details-type{
@@ -204,12 +282,31 @@
 .footer-details-info label{
     margin: 0.7em 1em;
 }
-/* footer */
 
-#footer-image{
-    margin-top: 5em;
-    margin-left: 0em;
-    width: 70%;
+@media(max-width:768px){
+   .footer{
+       flex-direction: column;
+       padding: 3em;
+   }
+
+   .footer .footer-details{
+      width: 70vw;
+   }
+
+   .footer-details #addr{
+      width: 40vw;
+   }
+
+   .footer .footer-form{
+        width: 65vw;
+   }
+
+   
+    .footer-form button{
+        margin: 0.15em 0em;
+        padding: 1em 1em;
+        width: 20vw;
+    }
 
 }
 
@@ -218,6 +315,9 @@
 .register{
     background-image: url('/imgs/bg.png');
     height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .register img{
@@ -283,6 +383,11 @@
     border-radius: 0.2em;
 }
 
+.register-form button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
 .register-form label{
     color:#ffff;
     margin:1em 2.9em;
@@ -294,11 +399,44 @@
     margin-left: 0.2em;
 }
 
+.register-form label a:hover{
+    color:#ffff;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .register-box{
+        /* background: red; */
+        margin-left: 7em;
+        width: 60vw;
+    }
+
+    .register img{
+        margin:2em 0em 2em 11.5em;
+    }
+
+    .register-form .phone input{
+        width: 45vw;
+    }
+
+    .register-form button{
+        width: 60vw;
+    }
+
+    .register-form label{
+        width: 48vw;
+        margin-left: 2em;
+    }
+}
+
 /* Login */
 
 .login{
     background-image: url('/imgs/bg.png');
     height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .login img{
@@ -342,6 +480,11 @@
     border-radius: 0.2em;
 }
 
+.login-form button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
 .login-form label{
     color:#ffff;
     margin:1em 1.5em;
@@ -352,6 +495,33 @@
     color: #00d3b8;
     margin-left: 0.2em;
 }
+
+.login-form label a:hover{
+    color: #ffff;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .login-box{
+        /* background: red; */
+        margin-left: 7em;
+        width: 60vw;
+    }
+
+    .login img{
+        margin:2em 0em 2em 11.5em;
+    }
+
+    .login-form button{
+        width: 60vw;
+    }
+
+    .login-form label{
+        width: 54vw;
+        margin-left: 1em;
+    }
+}
+
 
 /* homepageNav */
 
@@ -381,6 +551,11 @@
 
 .homepage-nav ul li{
     color: #ffff;
+}
+
+.homepage-nav ul li:hover{
+    color: #00d3b8;
+    cursor: pointer;
 }
 
 /* homepage */
@@ -421,6 +596,11 @@
     border-radius: 0.2em;
 }
 
+.home-options button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
 /* options */
 
 .options{
@@ -450,6 +630,11 @@
     width: 10vw;
     padding: 0.8em;
     border-radius: 0.2em;
+}
+
+.options button:hover{
+    background: #09c2a9;
+    cursor: pointer;
 }
 
 /* searchPage */
@@ -558,6 +743,7 @@
      /* background: chartreuse; */
       /* padding: 0.25em; */
       width: auto;
+      height: 3.5vh;
     }
 
   .rate input[type='radio']{
@@ -569,7 +755,7 @@
   .visitor{
       position: relative;
       margin: 1em;
-      background: #ebf5f6;
+      background: #d3e9eb;;
       display: flex;
       width: 43%;
       min-height: 10vh;
@@ -691,7 +877,7 @@
       margin: 2em;
       display: flex;
       flex-direction: column;
-      background: #ebf5f6;
+      background: #d3e9eb;;
       width: 30vw;
       justify-content: space-evenly;
 
@@ -796,7 +982,7 @@
 /* placesLogged */
 
 .placesLogged{
-    background:#ebf5f6;
+    background:#d3e9eb;;
     display: flex;
     margin: 0.5em;
     width: 40%;
@@ -940,7 +1126,7 @@
 /* user-profile */
 
 .userprofile .profileHead .profileHead-contact{
-    left: -2.5em;
+    left: -2.2em;
 }
 
 .userprofile .edit{
@@ -953,17 +1139,21 @@
 
     position: absolute;
     top: 8em;
-    left: 76em;
+    left: 75em;
+}
+
+.userprofile-cards{
+   display: flex; 
 }
 
 .userprofile-cards .sidebar{
-    background: #b9d8eb;
-    width: 18em;
-    margin:6em 12em;
+    /* background: #b9d8eb; */
+    width:20em;
+    margin:6em 10em;
 }
 
-.userprofile-cards .sidebar .search-post{
-    background:#ebf5f6;
+.userprofile-cards .search-post{
+    background:#d3e9eb;;
     min-height: 5vh;
     display: flex;
     justify-content: space-around;
@@ -974,7 +1164,7 @@
     outline: none;
 }
 
-.userprofile-cards .sidebar .search-post input{
+.userprofile-cards .search-post input{
     border: none;
     margin-right: 0.3em;
     height: 6vh;
@@ -982,7 +1172,7 @@
     padding: 0.2em 1em;
 }
 
-.userprofile-cards .sidebar .search-post button{
+.userprofile-cards .search-post button{
     height: 7vh;
     width: 3.6vw;
     padding: 0.8em;
@@ -990,6 +1180,148 @@
     outline: none;
     border:none;
 }
+
+.userprofile-cards .recent-searches .title{
+    background:#d3e9eb;;
+    padding: 0.8em;
+    margin-left: 0em;
+    border-bottom: solid 0.01em rgb(196, 196, 196);
+}
+
+.userprofile-cards .latest-search{
+    background:#d3e9eb;;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: solid 0.01em rgb(196, 196, 196);
+}
+
+.userprofile-cards .latest-search:nth-child(4){
+    border-bottom: none;
+}
+
+.userprofile-cards .latest-search-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.1em;
+}
+
+.userprofile-cards .latest-search-info label:nth-child(2){
+    font-size: small;
+}
+
+.userprofile-cards .latest-search .rate{
+   margin-top: 0.5em;
+}
+
+.userprofile .saved-contacts{
+    background:#d3e9eb;;
+    margin-top: 1em;
+    width: 25vw;
+}
+
+.userprofile .title{
+    background:#d3e9eb;;
+    padding: 0.8em;
+    margin-left: 0em;
+}
+
+.userprofile .contact-images{
+    background:#d3e9eb;
+    padding: 0.2em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.userprofile .contact-images img{
+    margin: 0.2em;
+    border-radius: 0.2em;
+}
+
+.userprofile-cards .main{
+    width: 20vw;
+    margin-bottom: 5.2em;
+    position: relative;
+    right: -1.2em;
+}
+
+.userprofile-cards .main .placesLogged{
+    width: 44vw;
+    margin-bottom: 0.3em;
+    position: relative;
+    right: 11em;
+    top: 5.5em;
+}
+
+.userprofile #more{
+    background: #00d3b8;
+    border: none;
+    color: white;
+    padding: 0.8em 3em;
+    margin: 0.5em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    position: relative;
+    left: 56.5em;
+}
+
+/* user edit*/
+.useredit{
+    background: #ffff;
+    width: 28vw;
+    height: 82.5vh;
+    position: absolute;
+    top: 8.5em;
+    left: 29em;
+}
+
+.useredit .editprofile .edit-title{
+    /* background: rgb(166, 166, 235); */
+    padding: 1em;
+    text-align: center;
+    margin-left: 0em;
+    border-bottom: #c9c5c5 solid 0.05em;
+}
+
+.useredit .editprofile .profile-pic #user-pic{
+    border-radius: 50%;
+    width: 8em;
+    margin: 1em 1em 1em 7em;
+}
+
+.useredit .editprofile .profile-pic #user-pic-edit{
+  position: relative;
+  bottom: 6em;
+  right: 2.8em;
+}
+
+.useredit .profile-edit-form .form-group {
+    /* background: chocolate; */
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em 0.5em;
+}
+
+.useredit .form-group input{
+    margin: 0.4em 0em;
+    padding:0.3em;
+    border: #c9c5c5 solid 0.09em;
+    border-radius: 0.1em;
+}
+
+.useredit #edit-done{
+    background: #00d3b8;
+    border: none;
+    color: white;
+    padding: 0.6em 2.5em;
+    margin: 1em 14.5em;
+    font-size: 1em;
+}
+
+
+
+
+
 
 
 

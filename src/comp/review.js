@@ -3,9 +3,9 @@ import Ratings from './ratings'
 import {OptionsContext} from './optionsContext'
 
 const Review =()=>{
-    const {visibility} = useContext(OptionsContext)
+    const {reviewVisibility} = useContext(OptionsContext)
 
-    const[visible, setvisibility] = visibility
+    const[visibleReview, setReviewVisible] = reviewVisibility
 
     return(
     <div className="review">
@@ -16,7 +16,7 @@ const Review =()=>{
                 <Ratings size={20}/>
             </div>
         </div>
-        <button onClick={()=>setvisibility(!(visible))}>Done</button>
+        <button onClick={()=>setReviewVisible(!(visibleReview))}>Done</button>
     </div>)
 }
 

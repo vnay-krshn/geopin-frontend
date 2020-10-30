@@ -2,10 +2,12 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 
 
-function Register(){
+const Register=()=>{
     return(
         <div className="register">
-            <img src='/imgs/logo.svg'></img>
+            <Link to='/'>
+                <img src='/imgs/logo.svg'></img>
+            </Link>
             <div className="register-box">
                 <h3>REGISTER</h3>
                 <form className="register-form">

@@ -3,8 +3,8 @@ import {OptionsContext} from './optionsContext'
 
 const Filter=()=>{
 
-    const {visibility} = useContext(OptionsContext)
-    const[visible, setvisibility] = visibility
+    const {filterVisibility} = useContext(OptionsContext)
+    const[visibleFilter, setFilterVisible] = filterVisibility
 
     return(
         <div className="filter">
@@ -14,7 +14,7 @@ const Filter=()=>{
                 <input placeholder="visited year"></input>
             </div>
             <input placeholder="visitor's rating"></input>
-            <button onClick={()=>{setvisibility(!visible)}}>Done</button>
+            <button onClick={()=>{setFilterVisible(!visibleFilter)}}>Done</button>
         </div>
     )
 }

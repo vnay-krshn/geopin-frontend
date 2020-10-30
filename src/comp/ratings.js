@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {FaStar} from 'react-icons/fa'
+import PropTypes from 'prop-types'
 
 const Ratings=({size})=>{
 
@@ -26,6 +27,10 @@ return(
         )
     })}
 </div>)
+}
+
+Ratings.propTypes={
+    size : PropTypes.number
 }
 
 export default Ratings

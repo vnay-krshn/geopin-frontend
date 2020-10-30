@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import DateRating from './dateRating'
+import PropTypes from 'prop-types'
 
 const Visitors=({username, date, phone})=>{
 return(
@@ -15,6 +16,12 @@ return(
         </div>
     </div>
 )
+}
+
+Visitors.propTypes={
+    username : PropTypes.string,
+    date : PropTypes.instanceOf(Date),
+    phone : PropTypes.number
 }
 
 export default Visitors

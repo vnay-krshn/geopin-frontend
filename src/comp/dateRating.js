@@ -1,5 +1,6 @@
 import React from 'react'
 import Ratings from './ratings'
+import PropTypes from 'prop-types'
 
 const DateRating = ({date,size})=>{
     return(
@@ -8,6 +9,11 @@ const DateRating = ({date,size})=>{
             <Ratings size={size}/>
         </div>
     )
+}
+
+DateRating.propTypes={
+ date : PropTypes.instanceOf(Date),
+ size : PropTypes.number
 }
 
 export default DateRating

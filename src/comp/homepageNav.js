@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function HomepageNav(){
+const HomepageNav=()=>{
     return(
     <div>
         <nav className="homepage-nav">
