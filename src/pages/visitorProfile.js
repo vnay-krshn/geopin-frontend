@@ -2,6 +2,8 @@ import React from 'react'
 import PlacesLogged from '../comp/placesLogged'
 import ProfileHead from '../comp/profileHead'
 import {visitors} from '../temp2'
+import '../css/profileHead.css'
+import '../css/placesLogged.css'
 
 const VisitorProfile=()=>{
     return(

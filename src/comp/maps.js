@@ -7,7 +7,6 @@ import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css";
 import "leaflet/dist/leaflet.js";
 import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js";
 
-
 // import marker icons
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -45,7 +44,7 @@ class Maps extends Component {
     const center = [37.7833, -122.4167];
     return (
       <Map
-        style={{ height: "100vh", zIndex:1}}
+        style={{ height: "100vh", width:'auto', zIndex:1}}
         center={center}
         zoom="10"
         ref={m => {

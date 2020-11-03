@@ -5,6 +5,7 @@ import {OptionsContext} from '../comp/optionsContext'
 import Maps from '../comp/maps'
 import PlaceInfo from '../comp/placeinfo'
 import Review from '../comp/review'
+import '../css/review.css'
 
 const CheckinResults=()=>{
     const {reviewVisibility} = useContext(OptionsContext)

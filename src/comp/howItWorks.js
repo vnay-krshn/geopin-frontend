@@ -1,5 +1,7 @@
 import React from 'react'
 import Features from './features'
+import '../css/howItWorks.css'
+import '../css/features.css'
 
 
 const HowItWorks=()=>{

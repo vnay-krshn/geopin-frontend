@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import DateRating from './dateRating'
 import PropTypes from 'prop-types'
+import '../css/dateRating.css'
 
 const Visitors=({username, date, phone})=>{
 return(

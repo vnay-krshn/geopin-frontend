@@ -7,6 +7,10 @@ import Visitors from '../comp/visitors'
 import {users} from '../temp'
 import PlaceInfo from '../comp/placeinfo'
 import Filter from '../comp/filter'
+import '../css/maps.css'
+import '../css/placeInfo.css'
+import '../css/visitors.css'
+import '../css/filter.css'
 
 const SearchResults=()=>{
     const {filterVisibility} = useContext(OptionsContext)

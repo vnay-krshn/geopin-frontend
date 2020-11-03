@@ -1,6 +1,7 @@
 import React from 'react'
 import HomepageNav from '../comp/homepageNav'
 import Options from '../comp/options'
+import '../css/options.css'
 
 const SearchPage=()=>{
   return(

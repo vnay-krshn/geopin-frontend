@@ -1,0 +1,17 @@
+/* maps */
+
+.leaflet-control-container{
+    position: absolute;
+    top: 10em;
+}
+
+.geocoder-control .leaflet-bar{
+  padding: 1em 0.5em;
+  width: 30vw;
+  border: none;
+  background-image: none;
+} 
+
+  /* .geocoder-control-input {
+    background-image: url("https://raw.githubusercontent.com/Esri/esri-leaflet-geocoder/master/src/img/search.png");
+  } */

@@ -1,0 +1,32 @@
+/* placesLogged */
+
+.placesLogged{
+    background:#d3e9eb;;
+    display: flex;
+    margin: 0.5em;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-around; 
+}   
+
+.placesLogged .region{
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.placesLogged-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.placesLogged-descr{
+   padding: 1em;
+}
+
+.placesLogged img{
+    width: auto;
+    max-height: 12em;
+}

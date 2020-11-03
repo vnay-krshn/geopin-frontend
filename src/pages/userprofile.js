@@ -6,6 +6,7 @@ import {savedContacts} from '../temp4'
 import LatestSearch from '../comp/latestSearch'
 import PlacesLogged from '../comp/placesLogged'
 import UserEdit from '../comp/userEdit'
+import '../css/userEdit.css'
 
 const UserProfile = ()=>{
 return(

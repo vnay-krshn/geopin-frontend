@@ -1,0 +1,31 @@
+/* visitors */
+
+.visitor{
+    position: relative;
+    margin: 1em;
+    background: #d3e9eb;;
+    display: flex;
+    width: 43%;
+    min-height: 10vh;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+.visitor img{
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+}
+
+.visitor-info{
+  /* background: darkmagenta;  */
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(2,9em);
+  grid-template-rows: repeat(2,2em);
+ }
+
+.visitor-info #username{
+  color: black;
+}
+

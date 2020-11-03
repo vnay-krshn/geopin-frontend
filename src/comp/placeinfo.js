@@ -1,5 +1,6 @@
 import React from 'react'
 import Ratings from './ratings'
+import '../css/ratings.css'
 
 const PlaceInfo=()=>{
     return(
@@ -11,7 +12,7 @@ const PlaceInfo=()=>{
             plains of Denville and Boonton Township. At this 
             point elevation is 480 feet (150 m) above sea level.</p>
         </div>
-        <div className="details">
+         <div className="details">
             <div className="details-type">
                 <label>Visitors</label>
                 <label>Ratings</label>
@@ -27,7 +28,7 @@ const PlaceInfo=()=>{
                 <Ratings size={10}/>
                 <label id="zip">1108</label>
             </div>
-        </div>
+        </div> 
     </div>)
 }
 

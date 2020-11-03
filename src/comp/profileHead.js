@@ -1,6 +1,7 @@
 import React from 'react'
 import HomepageNav from './homepageNav'
 import ProfileContact from './profileContact'
+import '../css/profileContact.css'
 
 const ProfileHead=()=>{
     return(

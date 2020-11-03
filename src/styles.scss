@@ -1,0 +1,858 @@
+@mixin bgndposition {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flexboxOne {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin buttonStyle {
+    background: #00d3b8;
+    border: none;
+    outline: none;
+    color: #ffff;
+    border-radius: 0.2em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* LandingPage */
+.landingpage-main{
+    /* background:rgb(6, 97, 59) ; */
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+    @include bgndposition();
+}
+
+.landing-nav{
+    /* background: rgb(2, 185, 109); */
+    height: 15vh;
+    @include flexboxOne();
+}
+
+.landing-nav ul{
+    /* background: silver; */
+    width: 50%;
+    list-style: none;
+    text-decoration: none;
+    color:white;
+    @include flexboxOne();
+}
+
+.landing-nav #login-button{
+    border: none;
+    outline: none;
+}
+
+.landingpage-main #logo{
+    height: 16vh;
+    width: 56vw;
+    margin: 7em 16.5em;
+}
+
+.landingpage-main .tagline{
+    /* background: chartreuse; */
+    text-align: center;
+    width: 45vw;
+    margin: -5em 0em 0em 24em ;
+    color: white;
+
+    font-size: 0.9em;
+}
+
+.landingpage-main .tagline button{
+    padding: 1em 5em;
+    margin: 2em;
+    font-size: 1em;
+    cursor: pointer;
+    @include buttonStyle();
+}
+
+.landingpage-main .tagline button:hover{
+    background: #09c2a9;
+}
+
+.landingpage-main li:hover{
+    color: #00d3b8;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+   .landing-nav{
+        height: auto;
+    }
+
+   .landing-nav ul{
+       flex-direction: column;
+       margin-top: 1em;
+   }
+
+   .landing-nav ul li, #login-button{
+        margin: 1em auto;
+   }
+
+   .landingpage-main #logo{
+    height: 9vh;
+    width: 76vw;
+    margin: 3em;
+  }
+
+   .landingpage-main .tagline{
+    /* background: chartreuse; */
+    text-align: center;
+    width: 65vw;
+    margin:0em 9.5em ;
+    color: white;
+    font-size: 0.6em;
+  }
+
+  .landingpage-main .tagline button{
+    padding: 1em 2.5em;
+    margin: 2em;
+    font-size: 1em;
+    @include buttonStyle();
+  }
+
+}
+
+/* Register */
+
+.register{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+    @include bgndposition();
+}
+
+.register img{
+    margin: 2em 35.6em;
+}
+
+.register-box{
+    /* background: turquoise; */
+    width: 25vw;
+    margin: 1em 30em;
+}
+
+.register-box h3{
+    font-weight: 400;
+    color: #ffff;
+    padding: 0.5em 0em;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: #bed1cf; */
+}
+
+.register-form input{
+    padding: 0.75em;
+    margin: 0.25em 0;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.register-form .phone{
+    display: flex;
+    align-items: flex-end;
+    /* background: saddlebrown; */
+}
+.register-form .phone input{
+   margin-left: 0.5em;
+   width: 20vw;
+   border: none;
+   outline: none;
+    /* background: saddlebrown; */
+}
+
+.register-form select{
+    height: 2.7em;
+    margin-bottom: 0.2em;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.register-form button{
+    width: 25vw;
+    padding: 0.8em;
+    margin-top: 0.25em;
+    cursor: pointer;
+    @include buttonStyle();
+}
+
+.register-form button:hover{
+    background: #09c2a9;
+}
+
+.register-form label{
+    color:#ffff;
+    margin:1em 2.9em;
+}
+
+.register-form label a{
+    text-decoration: none;
+    color: #00d3b8;
+    margin-left: 0.2em;
+    cursor: pointer;
+}
+
+.register-form label a:hover{
+    color:#ffff;
+}
+
+@media(max-width:768px){
+    .register-box{
+        /* background: red; */
+        margin-left: 7em;
+        width: 60vw;
+    }
+
+    .register img{
+        margin:2em 0em 2em 11.5em;
+    }
+
+    .register-form .phone input{
+        width: 45vw;
+    }
+
+    .register-form button{
+        width: 60vw;
+    }
+
+    .register-form label{
+        width: 48vw;
+        margin-left: 2em;
+    }
+}
+
+/* Login */
+
+.login{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+    @include bgndposition();
+}
+
+.login img{
+    margin: 2em 35.6em;
+}
+.login-box{
+    /* background: turquoise; */
+    width: 25vw;
+    margin: 1em 30em;
+}
+
+.login-box h3{
+    font-weight: 400;
+    color: #ffff;
+    padding: 0.5em 0em;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: #bed1cf; */
+}
+
+.login-form input{
+    padding: 0.75em;
+    margin: 0.25em 0;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+}
+
+.login-form button{
+    width: 25vw;
+    padding: 0.8em;
+    margin-top: 0.25em;
+    cursor: pointer;
+    @include buttonStyle();
+}
+
+.login-form button:hover{
+    background: #09c2a9;
+}
+
+.login-form label{
+    color:#ffff;
+    margin:1em 1.5em;
+}
+
+.login-form label a{
+    text-decoration: none;
+    color: #00d3b8;
+    margin-left: 0.2em;
+    cursor: pointer;
+}
+
+.login-form label a:hover{
+    color: #ffff;
+}
+
+@media(max-width:768px){
+    .login-box{
+        /* background: red; */
+        margin-left: 7em;
+        width: 60vw;
+    }
+
+    .login img{
+        margin:2em 0em 2em 11.5em;
+    }
+
+    .login-form button{
+        width: 60vw;
+    }
+
+    .login-form label{
+        width: 54vw;
+        margin-left: 1em;
+    }
+}
+
+/* homepage */
+
+.homepage{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+    @include bgndposition();
+}
+
+.home-display{
+    /* background: tomato; */
+    text-align: center;
+    margin: 4em auto;
+    height: 10em;
+    width: 19em;
+    color: white;
+
+    font-size: 1.7em;
+}
+
+.home-options{
+    /* border: violet solid 3px; */
+    width: 30vw;
+    margin: 2em auto;
+    @include flexboxOne();
+}
+
+.home-options button{
+    width: 15vw;
+    padding: 0.8em;
+    margin: 0.25em 0.8em;
+    @include buttonStyle();
+}
+
+.home-options button:hover{
+    background: #09c2a9;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .home-display{
+        width: auto;
+        height: auto;
+    }
+
+    .home-display p{
+       font-size: 1.3rem;
+       width: 70vw;
+       margin: 0 auto;
+    }
+    .home-options button{
+        width: 20vw;
+        padding: 0.8em 0.8em;
+        border-radius: 0.2em;
+    }
+    .home-options{
+        margin-top: 1.2em;
+        width: 50vw;
+        justify-content: center;
+    }
+}
+
+/* searchPage */
+
+.searchpage{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
+
+.searchpage h2{
+   margin: 5em  0em 2em 19em;
+   color:#ffff;
+   font-weight: 400;
+}
+
+@media(max-width:768px){
+    .searchpage h2{
+        font-size: 1.8rem;
+        margin:4.5em 0.5em 1em 1.8em;
+        font-weight: 300;
+    }
+    .searchpage .options{
+        margin: 0 auto;
+        width: auto;
+        justify-content: center;
+    }
+
+    .searchpage .options input{
+        width: 20em;
+    }
+
+    .searchpage .options button{
+        width: 15vw;
+    }
+}
+
+/* check in page */
+
+.checkInPage{
+    background-image: url('/imgs/bg.png');
+    height: 100vh;
+}
+
+.checkInPage h2{
+    margin: 5em  0em 2em 19em;
+    color:#ffff;
+    font-weight: 400;
+ }
+
+ @media(max-width:768px){
+    .checkInPage h2{
+        font-size: 1.8rem;
+        margin:4.5em 0em 1em 0.5em;
+        font-weight: 300;
+    }
+    .checkInPage .options{
+        margin: 0 auto;
+        width: auto;
+        justify-content: center;
+    }
+
+    .checkInPage .options input{
+        width: 20em;
+    }
+
+    .checkInPage .options button{
+        width: 15vw;
+    }
+}
+
+ /* search result page */
+
+ .searchResults-options{
+     padding: 2em 0em 1em 0em;
+     background:#314049;
+     opacity: 0.9;
+     height: 10vh;
+     width: 78.95em;
+     position: absolute;
+     z-index: 100;
+ }
+
+ .visitor-details{
+     /* background:gold; */
+     padding: 2em 10em;
+ }
+
+ .visitor-details button{
+     margin: 0.5em 0em 0em 60em;
+     width: 10vw;
+     padding: 0.8em;
+     cursor: pointer;
+     @include buttonStyle();
+ }
+
+ .visitor-details button:hover{
+    background: #02e4c6;
+ }
+
+ .visitor-details-header{
+    /* background: green; */
+    margin: 1em 1em 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+ }
+ .visitor-details-cards{
+     /* background: chocolate; */
+     display: flex;
+     flex-flow: row wrap;      
+     justify-content: space-around;
+ }
+
+ .visitor-details-header ul{
+    /* background: #5d5d5d; */
+    width: 8%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visitor-details-header ul img{
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .searchResults-options{
+        width: 96.7vw;
+        align-items: center;
+    }
+
+    .searchResults-options .options{
+        margin-left: 2.5em;
+        width: 80vw;
+        /* border: springgreen solid; */
+    }
+
+    .searchResults-options .options input{
+        width: 60vw;
+    }
+
+    .searchResults-options .options button{
+        width: 18vw;
+    }
+
+    .visitor-details-header{
+        margin:2em 0em 1em -7.5em;
+        width: 81vw;
+    }
+
+    .visitor-details-cards{
+        flex-direction: column;
+    }
+
+    .visitor-details-cards .visitor{
+        width: auto;
+        margin-left: -7.5em;
+    }
+
+    .visitor-details button{
+        margin-left:14.8em;
+        width: 20vw;
+    }
+
+    .searchResults .placeInfo{
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 1.8em;
+        top: 1.8em;
+        left: 2.1em;
+        width: 84vw;
+    }
+
+     .searchResults .placeInfo img{
+        width: 52vw;
+        height: 22vh;
+        margin: 1em 0em 0em 5em;
+    }
+
+    .searchResults .placeInfo .information{
+        display: flex;
+        flex-direction: column;
+        /* border: solid salmon; */
+        width: auto;
+   }
+
+   .searchResults .placeInfo .information p{
+        font-size: 0.8em;
+        margin-left: 0em;
+    }
+
+    .searchResults .placeInfo .details{
+        padding: 0;
+        /* border: salmon solid; */
+        width: auto;
+        margin-left: 6em;
+   }
+
+   .searchResults .placeInfo .details-info{
+       /* border: firebrick solid; */
+       width: 30vw;
+   }
+
+   .searchResults .filter{
+       top: 70em;
+       left: 15.2em;
+       width: auto;
+   }
+
+   .searchResults .filter div{
+       flex-direction: column;
+   }
+
+   .searchResults .filter div input{
+       width: 32.5vw;
+   }
+
+}
+
+
+ /* check in result page */
+
+ .checkinResults-options{
+    padding: 2em 0em 1em 0em;
+    background:#314049;
+    opacity: 0.9;
+    height: 10vh;
+    width: 78.95em;
+    position: absolute;
+    z-index: 100;
+}
+
+@media(max-width:768px){
+    .checkinResults-options{
+        width: 96.7vw;
+        align-items: center;
+    }
+
+    .checkinResults-options .options{
+        margin-left: 2.5em;
+        width: 80vw;
+        /* border: springgreen solid; */
+    }
+
+    .checkinResults-options .options input{
+        width: 60vw;
+    }
+
+    .checkinResults-options .options button{
+        width: 18vw;
+    }
+
+    .checkinResults .placeInfo{
+        flex-direction: column;
+        position: relative;
+        top: 1.8em;
+        left: 2.1em;
+        width: 84vw;
+        margin-bottom: 1.8em;
+    }
+
+     .checkinResults .placeInfo img{
+        width: 52vw;
+        height: 22vh;
+        margin: 1em 0em 0em 5em;
+    }
+
+    .checkinResults .placeInfo .information{
+        display: flex;
+        flex-direction: column;
+        /* border: solid salmon; */
+        width: auto;
+   }
+
+   .checkinResults .placeInfo .information p{
+        font-size: 0.8em;
+        margin-left: 0em;
+    }
+
+    .checkinResults .placeInfo .details{
+        padding: 0;
+        /* border: salmon solid; */
+        width: auto;
+        margin-left: 6em;
+   }
+
+   .checkinResults .placeInfo .details-info{
+       /* border: firebrick solid; */
+       width: 30vw;
+   }
+}
+
+/* visitor profile */
+
+.place-cards-container{
+    /* background: turquoise; */
+    padding: 6em 1em;
+}
+
+.place-cards-container #numberLog{
+    margin-left: 61.5em;
+}
+
+.place-cards-container button{
+    margin-left: 74.2em;
+    margin-top: 0.2em;
+    width: 10vw;
+    height: 7.5vh;
+    padding: 0.8em;
+    @include buttonStyle();
+}
+
+.place-cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.visitor-profile #save{
+    position: absolute;
+    top: 15.8em;
+    left: 69.5em;
+
+    width: 10vw;
+    height: 7.5vh;
+    padding: 0.8em;
+    @include buttonStyle();
+}
+
+/* user-profile */
+
+.userprofile .profileHead .profileHead-contact{
+    left: -2.2em;
+}
+
+.userprofile .edit{
+    background:transparent;
+    border: #00d3b8 solid 0.1em;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    color: #00d3b8;
+
+    position: absolute;
+    top: 8em;
+    left: 75em;
+}
+
+.userprofile-cards{
+   display: flex; 
+}
+
+.userprofile-cards .sidebar{
+    /* background: #b9d8eb; */
+    width:20em;
+    margin:6em 10em;
+}
+
+.userprofile-cards .search-post{
+    background:#d3e9eb;;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.4em;
+    margin-bottom: 1em;
+   
+    border:none;
+    outline: none;
+}
+
+.userprofile-cards .search-post input{
+    border: none;
+    margin-right: 0.3em;
+    height: 6vh;
+    width: 16em;
+    padding: 0.2em 1em;
+}
+
+.userprofile-cards .search-post button{
+    height: 7vh;
+    width: 3.6vw;
+    padding: 0.8em;
+    background: #00d3b8;
+    outline: none;
+    border:none;
+}
+
+.userprofile-cards .recent-searches .title{
+    background:#d3e9eb;;
+    padding: 0.8em;
+    margin-left: 0em;
+    border-bottom: solid 0.01em rgb(196, 196, 196);
+}
+
+.userprofile-cards .latest-search{
+    background:#d3e9eb;;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: solid 0.01em rgb(196, 196, 196);
+}
+
+.userprofile-cards .latest-search:nth-child(4){
+    border-bottom: none;
+}
+
+.userprofile-cards .latest-search-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.1em;
+}
+
+.userprofile-cards .latest-search-info label:nth-child(2){
+    font-size: small;
+}
+
+.userprofile-cards .latest-search .rate{
+   margin-top: 0.5em;
+}
+
+.userprofile .saved-contacts{
+    background:#d3e9eb;;
+    margin-top: 1em;
+    width: 25vw;
+}
+
+.userprofile .title{
+    background:#d3e9eb;;
+    padding: 0.8em;
+    margin-left: 0em;
+}
+
+.userprofile .contact-images{
+    background:#d3e9eb;
+    padding: 0.2em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.userprofile .contact-images img{
+    margin: 0.2em;
+    border-radius: 0.2em;
+}
+
+.userprofile-cards .main{
+    width: 20vw;
+    margin-bottom: 5.2em;
+    position: relative;
+    right: -1.2em;
+}
+
+.userprofile-cards .main .placesLogged{
+    width: 44vw;
+    margin-bottom: 0.3em;
+    position: relative;
+    right: 11em;
+    top: 5.5em;
+}
+
+.userprofile #more{
+    padding: 0.8em 3em;
+    margin: 0.5em;
+    font-size: 1em;
+    position: relative;
+    left: 56.5em;
+    @include buttonStyle();
+}
+
+
+
+
+
+
+
