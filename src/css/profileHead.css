@@ -9,6 +9,10 @@
     color: white;
 }
 
+.profileHead-name{
+  margin-left: -2em;
+}
+
 .profileHead-header #profile{
   border-radius: 50%;
   width: 6.5em;
@@ -17,7 +21,7 @@
   
   position: relative;
   top: 7.5em;
-  left: 4.5em;
+  left: 4em;
 }
 
 .profileHead-name{

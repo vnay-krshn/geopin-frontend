@@ -1,8 +1,8 @@
 import React from 'react'
-import Contact from '../comp/contact';
-import HowItWorks from '../comp/howItWorks';
 import {animateScroll as scroll} from 'react-scroll'
 import {Link} from 'react-router-dom'
+import Contact from '../comp/contact';
+import HowItWorks from '../comp/howItWorks';
 
 const Landingpage=()=>{
 
@@ -22,7 +22,7 @@ const Landingpage=()=>{
                         <li onClick={toggleMid}>How it works</li>
                         <li onClick={toggleBttm}>Contact</li>
                         <Link to='/register'>
-                             <a><img id="login-button" src='/imgs/login_link.png'></img></a>
+                             <img id="login-button" src='/imgs/login_link.png'></img>
                         </Link>
                     </ul>
                 </nav>
@@ -32,8 +32,8 @@ const Landingpage=()=>{
                     <button>GET STARTED</button>
                 </div> 
             </div>
-            <HowItWorks/>
-            <Contact/>
+          <HowItWorks/>
+          <Contact/>
         </div>
     )
 }

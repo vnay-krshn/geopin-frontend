@@ -1,4 +1,4 @@
-export const visitors =[
+export const placesData =[
     {
         location: 'Bontoon Plains',
         place: 'New York',

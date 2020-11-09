@@ -14,14 +14,9 @@ const PlaceInfo=()=>{
         </div>
          <div className="details">
             <div className="details-type">
-                <label>Visitors</label>
-                <label>Ratings</label>
-                <label>Zip</label>
-            </div>
-            <div className="details-colon">
-                <label>:</label>
-                <label>:</label>
-                <label>:</label>
+                <label>Visitors<pre> :</pre></label>
+                <label>Ratings<pre> :</pre></label>
+                <label>Zip<pre>     :</pre></label>
             </div>
             <div className="details-info">
                 <label id="visitor-num">476</label>

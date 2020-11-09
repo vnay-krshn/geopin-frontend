@@ -1,6 +1,7 @@
 import React from 'react'
-import Ratings from './ratings'
 import PropTypes from 'prop-types'
+import Ratings from './ratings'
+
 
 const DateRating = ({date,size})=>{
     return(
@@ -12,7 +13,7 @@ const DateRating = ({date,size})=>{
 }
 
 DateRating.propTypes={
- date : PropTypes.instanceOf(Date),
+ date : PropTypes.string,
  size : PropTypes.number
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Ratings from './ratings'
 import PropTypes from 'prop-types'
+import Ratings from './ratings'
 
 const LatestSearch =({place, date})=>{
     return(
@@ -15,7 +15,7 @@ const LatestSearch =({place, date})=>{
 
 LatestSearch.propTypes={
     place : PropTypes.string,
-    date : PropTypes.instanceOf(Date)
+    date : PropTypes.string
 }
 
 export default LatestSearch

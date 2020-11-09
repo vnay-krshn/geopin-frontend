@@ -3,7 +3,7 @@
 .visitor{
     position: relative;
     margin: 1em;
-    background: #d3e9eb;;
+    background: #b4f0e9;
     display: flex;
     width: 43%;
     min-height: 10vh;
@@ -27,5 +27,10 @@
 
 .visitor-info #username{
   color: black;
+  cursor: pointer;
+}
+
+.visitor-info #username:hover{
+  color:rgb(146, 146, 146);
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import HomepageNav from './homepageNav'
-import ProfileContact from './profileContact'
 import '../css/profileContact.css'
 
 const ProfileHead=()=>{
@@ -10,14 +9,17 @@ const ProfileHead=()=>{
             <div className="profileHead-header">
                 <img id="profile" src='/imgs/user_image_bitmap.svg'></img>
                 <div className="profileHead-name">
-                    <h4>User Name</h4>
-                    <label>User Email Id</label>
+                    <h4>Joseph Pete</h4>
+                    <label>joseph123@gmail.com</label>
                 </div>
                 <div className="profileHead-nationality">
                     <img src='/imgs/india-flag.jpg'></img>
                     <label>Indian</label>
                 </div>
-                <ProfileContact/>
+                <div className='profileHead-contact'>
+                    <label>Contact number</label>
+                    <label>9445678987</label>
+                </div>
             </div>
         </div>)
 }

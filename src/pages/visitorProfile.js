@@ -1,7 +1,7 @@
 import React from 'react'
 import PlacesLogged from '../comp/placesLogged'
 import ProfileHead from '../comp/profileHead'
-import {visitors} from '../temp2'
+import {placesData} from '../mockData/placesData'
 import '../css/profileHead.css'
 import '../css/placesLogged.css'
 
@@ -13,11 +13,11 @@ const VisitorProfile=()=>{
         <div className="place-cards-container">
             <label id="numberLog">Places Logged : 12</label>
             <div className="place-cards">
-                {visitors.map((data,key)=>(
+                {placesData.map((data,key)=>(
                     <PlacesLogged date={data.date} location={data.location} place={data.place} description={data.description} key={key}/>
                 ))}
             </div>
-            <button>More</button>
+            <button id="more">More</button>
         </div>
     </div>)
 }

@@ -21,7 +21,7 @@ return(
 
 Visitors.propTypes={
     username : PropTypes.string,
-    date : PropTypes.instanceOf(Date),
+    date : PropTypes.string,
     phone : PropTypes.number
 }
 

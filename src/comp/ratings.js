@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 const Ratings=({size})=>{
 
 const[rating, setRating] = useState(null)
+const[hover, setHover] =useState(null)
 
 return(
 <div className="rate">
@@ -21,8 +22,10 @@ return(
 
                 <FaStar
                 className="star"
-                color={ratingValue <= rating ? '#ffc107' : '#e4e5e9'}
-                size={size}/>
+                color={ratingValue <= (hover||rating) ? '#00d3b8' : '#e4e5e9'}
+                size={size}
+                onMouseEnter={()=>setHover(ratingValue)}
+                onMouseLeave={()=>setHover(null)}/>
             </label>
         )
     })}

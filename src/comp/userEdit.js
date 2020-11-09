@@ -1,6 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import {OptionsContext} from '../comp/optionsContext'
 
 const UserEdit=()=>{
+
+    const {userEditVisibility} = useContext(OptionsContext)
+    const[visibleUserEdit, setUserEditVisible] = userEditVisibility
+
     return(
         <div className="useredit">
                 <div className="editprofile">
@@ -28,7 +33,7 @@ const UserEdit=()=>{
                             </div>
                         </form>
                  </div>
-                 <button id="edit-done">DONE</button>
+                 <button id="edit-done" onClick={()=>setUserEditVisible(!(visibleUserEdit))}>DONE</button>
         </div>
     )
 }

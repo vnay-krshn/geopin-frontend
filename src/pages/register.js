@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Link } from 'react-router-dom'
+import Dropdown from '../comp/dropdown'
+import { OptionsContext } from '../comp/optionsContext'
+import {countriesData} from '../mockData/countriesData'
 
 
 const Register=()=>{
+
+    const {nationality} = useContext(OptionsContext)
+    const[country, setcountry] = nationality
+
     return(
         <div className="register">
             <Link to='/'>
@@ -14,10 +21,7 @@ const Register=()=>{
                     <input placeholder="Name"></input>    
                     <input placeholder="Email"></input>   
                     <div className="phone">
-                        <select>
-                            <option>India</option>
-                            <option>USA</option>
-                        </select>
+                        <Dropdown options={countriesData} value={country} onChange={(v)=>setcountry(v)}/>
                         <input placeholder="Phone number"></input>
                     </div>
                     <input placeholder="Password"></input> 
@@ -28,7 +32,7 @@ const Register=()=>{
                     <label>
                         Already have an account?
                         <Link to='/login'>
-                            <a>Login</a>
+                            Login
                         </Link>
                     </label>
                 </form>      

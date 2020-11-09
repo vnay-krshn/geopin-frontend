@@ -1,7 +1,11 @@
 import React from 'react'
 import Features from './features'
+
+import {featuresData} from '../mockData/featuresData'
+
 import '../css/howItWorks.css'
 import '../css/features.css'
+
 
 
 const HowItWorks=()=>{
@@ -10,9 +14,9 @@ const HowItWorks=()=>{
         <h1>HOW IT WORKS</h1>
         <h4>Some instructions and suggestions</h4>
         <div className="icon-container">
-            <Features src={'imgs/searche_location_icon.svg'} title={'Search location'} descr={"Ut tempus faucibus sapien, quis pulvinar massa feugiat vel. Praesent non blandit , quis pulvinar massa feugiat vel. Praesent non blandit"}/>
-            <Features src={'imgs/searche_location_icon.svg'} title={'Check in your location'} descr={"Ut tempus faucibus sapien, quis pulvinar massa feugiat vel. Praesent non blandit , quis pulvinar massa feugiat vel. Praesent non blandit"}/>
-            <Features src={'imgs/searche_location_icon.svg'} title={'Contact visitors'} descr={"Ut tempus faucibus sapien, quis pulvinar massa feugiat vel. Praesent non blandit , quis pulvinar massa feugiat vel. Praesent non blandit"}/>
+           {featuresData.map((item)=>(
+            <Features src={item.src} title={item.title} descr={item.description} key={item.id}/>
+        ))}
         </div>
     </div>)
 }

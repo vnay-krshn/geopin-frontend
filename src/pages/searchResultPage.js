@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import HomepageNav from '../comp/homepageNav'
-import Options from '../comp/options'
 import {OptionsContext} from '../comp/optionsContext'
 import Maps from '../comp/maps'
 import Visitors from '../comp/visitors'
-import {users} from '../temp'
-import PlaceInfo from '../comp/placeinfo'
 import Filter from '../comp/filter'
+
+import {usersData} from '../mockData/userData'
+
 import '../css/maps.css'
 import '../css/placeInfo.css'
 import '../css/visitors.css'
@@ -20,11 +20,7 @@ const SearchResults=()=>{
     return(
     <div className='searchResults'>
         <HomepageNav/>
-        <div className='searchResults-options'>
-            <Options option={'Search'}/>
-        </div>
-        <Maps/>
-        <PlaceInfo/>     
+        <Maps/> 
         <div className='visitor-details'>
             <div className='visitor-details-header'>
                 <h3>Recent visitors of PLACE_NAME</h3>
@@ -35,7 +31,7 @@ const SearchResults=()=>{
             </div>
 
             <div className="visitor-details-cards">
-                {users.map((data,key)=>(
+                {usersData.map((data,key)=>(
                     <Visitors username={data.name} date={data.date} phone={data.phone} key={key}/>
                 ))}
             </div>

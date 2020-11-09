@@ -48,3 +48,7 @@
     padding: 0.8em;
     border-radius: 0.2em;
 }
+
+.review button:hover{
+    background: #09c2a9;
+}

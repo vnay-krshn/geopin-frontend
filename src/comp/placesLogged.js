@@ -1,6 +1,6 @@
 import React from 'react'
-import DateRating from './dateRating'
 import PropTypes from 'prop-types'
+import DateRating from './dateRating'
 
 const PlacesLogged =({location, place, description,date})=>{
     return(
@@ -24,7 +24,7 @@ PlacesLogged.propTypes={
     location : PropTypes.string,
     place : PropTypes.string,
     decription : PropTypes.string,
-    date : PropTypes.instanceOf(Date)
+    date : PropTypes.string
 }
 
 export default PlacesLogged
