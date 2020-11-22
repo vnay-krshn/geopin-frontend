@@ -119,6 +119,11 @@
 
 /* Register */
 
+.register-box .error{
+    color: rgb(241, 151, 151);
+    font-size: 0.9rem;
+}
+
 .register{
     background-image: url('/imgs/bg.png');
     height: 100vh;
@@ -144,13 +149,55 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+   
     input{
         padding: 0.75em;
         margin: 0.25em 0;
         border: none;
         outline: none;
+        width: 23.5vw;
         border-radius: 0.2em;
+    }
+
+    .contact .flag-select__btn{
+        background: #ffff;
+        color: rgb(141, 140, 140);
+        width: 7vw;
+        height: 5.5vh;
+        padding: 0;
+    }
+
+    .flag-select__option{
+        //background: blueviolet;
+        height: 2vh;
+        width: 4vw;
+        font-size: 0.85rem;
+    }
+
+    .flag-select__option .flag-select__option__label{
+        display: none;
+    }
+
+    .flag-select__options {
+        //background: brown;
+        height: 10vh;
+        width: 7vw;
+        overflow: hidden;
+    }
+
+    .flag-select__options .filterBox input{
+        border: solid 1px black;
+        margin:0em 0.1em 0.3em 0.3em;
+        height: 2vh;
+        width: 6vw;
+        padding: 0.2em 0em 0.2em 0.2em;
+        text-indent: 0.3em;
+    }
+
+    .flag-select__option__icon{
+        width: 18vw;
+        margin-left: -6em;
+        margin-top: -0.5em;
     }
 
     button{
@@ -165,16 +212,29 @@
         }
     }
 
-    .phone{
+    .contact{
         display: flex;
-        align-items: flex-end;
-
-        input{
-            margin-left: 0.5em;
-            width: 20vw;
+        align-items: flex-start;
+        
+       input{
+            margin-left: 0.4em;
+            width: 16vw;
             border: none;
             outline: none;
          }
+
+         .phone{
+             display: flex;
+             flex-direction: column;
+             width: 22vw;
+         }
+
+    .errorPhone{
+        color: rgb(241, 151, 151);
+        margin-left: 0.5em;
+        
+    }
+    
     }
 }
 
@@ -252,6 +312,7 @@
         border: none;
         outline: none;
         border-radius: 0.2em;
+        width: 23.5vw;
     }
 
     label{
@@ -776,13 +837,13 @@
     }
 
    .latest-search{
-        background:#d3e9eb;;
+        background:#a7d4d8;
         display: flex;
         justify-content: space-between;
         padding: 0.5em;
         border-bottom: solid 0.01em rgb(196, 196, 196);
 
-        &:nth-child(4){
+        &:nth-child(5){
             border-bottom: none;
         }
 
@@ -797,14 +858,14 @@
     }
 
     .recent-searches .title{
-        background:#d3e9eb;;
+        background:#a7d4d8;
         padding: 0.8em;
         margin-left: 0em;
         border-bottom: solid 0.01em rgb(196, 196, 196);
     }
 
     .search-post{
-        background:#d3e9eb;
+        background:#a7d4d8;
         min-height: 5vh;
         display: flex;
         justify-content: space-around;
@@ -838,19 +899,19 @@
 }
 
 .userprofile .saved-contacts{
-    background:#d3e9eb;;
+    background:#d3e9eb;
     margin-top: 1em;
     width: 25vw;
 }
 
 .userprofile .title{
-    background:#d3e9eb;;
+    background:#a7d4d8;
     padding: 0.8em;
     margin-left: 0em;
 }
 
 .userprofile .contact-images{
-    background:#d3e9eb;
+    background:#a7d4d8;
     padding: 0.2em;
     display: flex;
     flex-flow: row wrap;
@@ -890,6 +951,52 @@
         background: #09c2a9;
     }
     
+}
+
+.profile-edit-form {
+
+    .flag-select__btn{
+        background: #ffff;
+        color: rgb(141, 140, 140);
+        width: 26.5vw;
+        height: 5.5vh;
+        padding-bottom: 0.5em;
+    }
+
+    .flag-select__option{
+        //background: blueviolet;
+        height: 2vh;
+        width: 20vw;
+        font-size: 0.85rem;
+    }
+
+    .flag-select__option .flag-select__option__label{
+        //background: slateblue;
+        margin-left: 1em;
+    }
+
+    .flag-select__options {
+        //background: brown;
+        height: 10vh;
+        width: 26vw;
+        overflow-x: hidden;
+    }
+
+    .flag-select__options .filterBox input{
+        border: solid 1px black;
+        margin:0em 0.1em 0.3em 0.3em;
+        height: 4vh;
+        width: 24vw;
+        padding: 0.2em 0em 0.2em 0.2em;
+        text-indent: 0.3em;
+    }
+
+    .flag-select__option__icon{
+        width: 5vw;
+        height: 3vh;
+        //background: slateblue;
+    }
+
 }
 
 

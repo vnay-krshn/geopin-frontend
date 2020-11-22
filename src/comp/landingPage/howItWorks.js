@@ -1,10 +1,10 @@
 import React from 'react'
 import Features from './features'
 
-import {featuresData} from '../mockData/featuresData'
+import {featuresData} from '../../mockData/featuresData'
 
-import '../css/howItWorks.css'
-import '../css/features.css'
+import '../../css/landingPage/howItWorks.css'
+import '../../css/landingPage/features.css'
 
 
 

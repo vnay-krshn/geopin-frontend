@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import {animateScroll as scroll} from 'react-scroll'
 import {Link} from 'react-router-dom'
-import Contact from '../comp/contact';
-import HowItWorks from '../comp/howItWorks';
+import Contact from '../comp/landingPage/contact';
+import HowItWorks from '../comp/landingPage/howItWorks';
+import axios from 'axios'
 
 const Landingpage=()=>{
 
@@ -14,6 +15,17 @@ const Landingpage=()=>{
       scroll.scrollToBottom()
   }
 
+  const[loggedin, setlogin]=useState('/register')
+
+  const pagelink=()=>{
+    if(localStorage.token===undefined){
+      setlogin('/register')
+    }
+    else{
+      setlogin('/login')
+    }
+  }
+
     return(
         <div className="landingpage">
             <div className="landingpage-main">
@@ -21,7 +33,7 @@ const Landingpage=()=>{
                     <ul>
                         <li onClick={toggleMid}>How it works</li>
                         <li onClick={toggleBttm}>Contact</li>
-                        <Link to='/register'>
+                        <Link to={loggedin} onClick={pagelink}>
                              <img id="login-button" src='/imgs/login_link.png'></img>
                         </Link>
                     </ul>

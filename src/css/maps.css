@@ -1,14 +1,30 @@
-/* maps */
-
-.maps{
+#map{
   height: 100vh;
-  width:auto;
-  z-index: 1;
+} 
+
+.mapboxgl-ctrl-geocoder--icon-search{
+  display: none;
+} 
+
+.mapboxgl-ctrl-top-right{
+  position: absolute;
+  width: 100vw;
+  right: 40.5em;
+  top: -7.1em;
+  z-index: 400;
 }
 
-.leaflet-control-container{
-    position: absolute;
-    top: 10em;
+.mapboxgl-ctrl-group{
+  position: relative;
+  right: 60em;
+  top: 16em;
+}
+
+.mapboxgl-ctrl-geocoder--input{
+  border: none;
+  right: 20em;
+  padding: 1.4em;
+  padding: 1em;
 }
 
 .divContainer{
@@ -41,31 +57,3 @@
 .divContainer button:hover{
 background: #09c2a9;
 }
-
-@media(max-width:768px){
-  .divContainer button{
-    width: 20vw;
-  }
-}
-
-.geocoder-control .geocoder-control-suggestions{
-  /* background: red; */
-  position: absolute;
-  top: -13em;
-  left: 28em;
-  width: 33vw;
-}
-
-.geocoder-control .geocoder-control-input{
-  border: none;
-  position: absolute;
-  width:33vw;
-  top: -14.1em;
-  left: 26em;
-  padding: 1.4em;
-}
-
-.maps .placeInfo{
-  z-index: 9999;
-}
-

@@ -18,7 +18,8 @@
 .footer .footer-form{
     /* background: rebeccapurple; */
     display: flex;
-    flex-flow: wrap column;
+    flex-direction: column;
+    justify-content: space-between;
     width: 25vw;
 }
 
@@ -86,6 +87,10 @@
 
 .footer-details-info label{
     margin: 0.7em 1em;
+}
+
+.footer-form .errorFooter{
+    color: rgb(241, 151, 151);
 }
 
 @media(max-width:768px){

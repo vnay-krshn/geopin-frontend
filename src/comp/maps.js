@@ -1,27 +1,12 @@
 import React, { Component } from "react";
 
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
-import "leaflet/dist/leaflet.js";
-
-import { Map, TileLayer } from "react-leaflet";
-
-import * as ELG from "esri-leaflet-geocoder";
-import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css";
-import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js";
-
 import Ratings from './ratings'
 import PlaceInfo from '../comp/placeinfo'
 
-// import marker icons
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.4.0/dist/images/marker-icon-2x.png",
-  iconUrl: "https://unpkg.com/leaflet@1.4.0/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.4.0/dist/images/marker-shadow.png"
-});
+import mapboxgl from 'mapbox-gl'
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 
 class Maps extends Component {
@@ -52,37 +37,36 @@ class Maps extends Component {
       }
     })
 
-    const map = this.leafletMap.leafletElement;
-    const searchControl = new ELG.Geosearch({
-      placeholder:`${button.textContent}`,
-      useMapBounds:false,
-      expanded:true,
-      collapseAfterResult:false
-    }).addTo(map);
-    searchControl.className='searchbar'
-    const results = new L.LayerGroup().addTo(map);
-
     var divContainer = document.querySelector('.divContainer')
-    var mapContainer = document.querySelector('.maps')        
+    var mapContainer = document.querySelector('#map')        
     mapContainer.appendChild(divContainer) 
-    
-    searchControl.on("results", function(data) {
-      results.clearLayers();
-      var i = data.results.length - 1
-      data.results.forEach(() => {
-        if(i>=0)
-        { 
-          results.addLayer(L.marker(data.results[i].latlng));
-          i--;
-        }
-      });
-    
-    });  
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmluYXlrcmlzaG5hbiIsImEiOiJja2hzcDc5OGQwMndxMnpvM2RwdDVhNmFhIn0.aVpBgvw8pQDdNn0eoQjXtQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 6,
+        center:[78.47, 22.19]
+    });
+    const nav = new mapboxgl.NavigationControl();
+    map.addControl(nav);
+
+    var geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl:mapboxgl
+    })
+
+    geocoder.on('result',function(e)
+    {
+      console.log(e.result.geometry.coordinates[0])
+    })
+
+    map.addControl(geocoder)
     
   }
 
   componentDidUpdate(){
-    const checkIn = document.querySelector('.maps, .placeInfo')
+    const checkIn = document.querySelector('#map, .placeInfo')
     const button = document.querySelector('.operation')
 
     if(this.state.visibleReview){
@@ -95,24 +79,13 @@ class Maps extends Component {
     }
 }
 
-  render() {
-    const center = [37.7833, -122.4167];  
+  render() {  
 
     return (
       <div>
-        <Map
-          className="maps"
-          center={center}
-          zoom="10"
-          ref={m => {
-            this.leafletMap = m;
-          }}>
-          <TileLayer
-            attribution="&copy; <a href='https://osm.org/copyright'>OpenStreetMap</a> contributors"
-            url={"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}
-          />
-          <PlaceInfo/>
-          </Map>
+         <div id="map">
+           <PlaceInfo/>
+         </div>
           <div className="divContainer">
               <button className="operation"></button>
           </div>
