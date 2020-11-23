@@ -1,13 +1,5 @@
   /* ratings */
-
-  .rate{
-    /* background: chartreuse; */
-     /* padding: 0.25em; */
-     width: auto;
-     height: 3.5vh;
-   }
-
- .rate input[type='radio']{
-     visibility: hidden;
- }
+.star{
+  width: 2.2vw;
+}
 

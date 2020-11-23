@@ -1,31 +1,23 @@
 import React, { useState } from 'react'
 import {FaStar} from 'react-icons/fa'
 import PropTypes from 'prop-types'
+import '../../src/css/ratings.css'
 
-const Ratings=({size})=>{
+const Ratings=({size, value})=>{
 
-const[rating, setRating] = useState(null)
-const[hover, setHover] =useState(null)
+const rating = value
 
 return(
 <div className="rate">
-    {[...Array(5)].map((star, i,key)=>{
-        const ratingValue = i + 1
+    {[...Array(5)].map((star,i)=>{
+        const ratingValue = i + 1        
         return(
-            <label key={i}>
-                <input 
-                type="radio" 
-                name="rating" 
-                value={ratingValue}
-                onClick={()=> setRating(ratingValue)}>
-                </input>
-
+               <label key={ratingValue}>
                 <FaStar
                 className="star"
-                color={ratingValue <= (hover||rating) ? '#00d3b8' : '#e4e5e9'}
+                color={ratingValue <= rating ? '#00d3b8' : '#e4e5e9'}
                 size={size}
-                onMouseEnter={()=>setHover(ratingValue)}
-                onMouseLeave={()=>setHover(null)}/>
+                />
             </label>
         )
     })}

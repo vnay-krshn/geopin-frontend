@@ -14,14 +14,14 @@
 
 .review-box{
     border:none;
-    width: 20.9em;
+    width: 20.9vw;
     margin: 1em;
 }
 
 .review-box textarea{
     padding: 1em;
-    width: 23.1em;
-    height: 12em;
+    width: 27.7vw;
+    height: 25vh;
     border-top:none;
     border-left: none;
     border-right: none;
@@ -33,13 +33,13 @@
     display: flex;
     padding: 0.7em;
     justify-content: space-between;
-    width: 19.5em;
+    width: 28vw;
     margin-top: -0.3em;
     background: #ffff;
 }
 
 .review button{
-    margin: 0em 0em 0.5em 16.8em;
+    margin: 0em 0em 0.5em 20em;
     background-color: #00d3b8;
     color: #ffff;
     border: none;
