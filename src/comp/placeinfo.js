@@ -2,12 +2,12 @@ import React from 'react'
 import Ratings from './ratings'
 import '../css/ratings.css'
 
-const PlaceInfo=()=>{
+const PlaceInfo=({location})=>{
     return(
     <div className="placeInfo">
         <img src='/imgs/side_image.png'></img>
         <div className="information" >
-            <h2>Place Name</h2>
+            <h2>{location}</h2>
             <p>The Rockaway River flows through flat 
             plains of Denville and Boonton Township. At this 
             point elevation is 480 feet (150 m) above sea level.</p>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import  CheckinRating from './CheckinRating'
+import CheckinRating from './CheckinRating'
 import PlaceInfo from '../comp/placeinfo'
 
 import mapboxgl from 'mapbox-gl'
@@ -21,7 +21,10 @@ class Maps extends Component {
       review: '',
       rating: 0,
       location: '',
-      city: ''
+      city: '',
+      locationSelect: false,
+      checkin: false,
+      sameLocation: false
     }
   }
 
@@ -31,20 +34,20 @@ class Maps extends Component {
     axios.get("https://us1.locationiq.com/v1/reverse.php?key=pk.a418ebb2be45d0efd214f1e25c8bdc65&lat=" +
       lat + "&lon=" + lng + "&format=json")
       .then(results => {
-        if(results.data.address.city!=undefined){
+        if (results.data.address.city != undefined) {
           let cityName = results.data.address.city
           console.log(cityName)
-          this.setState({city:cityName})
+          this.setState({ city: cityName })
         }
-        else if(results.data.address.suburb!=undefined){
+        else if (results.data.address.suburb != undefined) {
           let suburb = results.data.address.suburb
           console.log(suburb)
-          this.setState({city:suburb})
+          this.setState({ city: suburb })
         }
-        else{
+        else {
           let county = results.data.address.county
           //console.log(county)
-          this.setState({city:county})
+          this.setState({ city: county })
           //console.log(this.state.city)
         }
       })
@@ -64,8 +67,11 @@ class Maps extends Component {
     }
 
     button.addEventListener('click', () => {
-      if (flag) {
-        this.setState({ visibleReview: !(this.state.visibleReview) })
+  
+      if (flag && this.state.locationSelect) {
+          this.setState({ visibleReview: !(this.state.visibleReview) })
+      } else {
+        alert('Please select a location')
       }
     })
 
@@ -90,19 +96,18 @@ class Maps extends Component {
 
     geocoder.on('result', (e) => {
       let arr = e.result.geometry.coordinates
-      this.setState({ coordinates: arr })
-      this.setState({location:e.result.text})
+      this.setState({ coordinates: arr, location: e.result.text })
       this.getCity(this.state.coordinates)
+      this.setState({ locationSelect: true })
     })
     map.addControl(geocoder)
 
   }
 
-  componentDidUpdate() {
-    console.log(this.state)
+
+  componentDidUpdate(prevProps, prevState) {
     const checkIn = document.querySelector('#map, .placeInfo')
     const button = document.querySelector('.operation')
-
     if (this.state.visibleReview) {
       checkIn.style.filter = 'blur(2px)'
       button.disabled = true
@@ -111,6 +116,12 @@ class Maps extends Component {
       checkIn.style.filter = 'None'
       button.disabled = false
     }
+  }
+
+
+  showRating(r) {
+    // console.log(rate)
+    this.setState({ rating: r })
   }
 
   render() {
@@ -126,10 +137,10 @@ class Maps extends Component {
         {this.state.visibleReview &&
           <div className="review">
             <div className="review-box">
-              <textarea placeholder="Add your description" onChange={(e)=>{this.setState({review:e.target.value})}}></textarea>
+              <textarea placeholder="Add your description" onChange={(e) => { this.setState({ review: e.target.value }) }}></textarea>
               <div className="review-rating">
                 <label>Rate the location</label>
-                <CheckinRating size={18} />
+                <CheckinRating size={18} selectRating={(e) => { this.showRating(e) }} />
               </div>
             </div>
             <button onClick={() => this.setState({ visibleReview: !(this.state.visibleReview) })}>Done</button>
